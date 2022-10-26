@@ -95,6 +95,7 @@
 .col-3{
   flex-basis:30%;
   max-width:250px;
+  /*background-color:#f4f4f4;*/
   text-align: center;
 }
 
