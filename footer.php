@@ -5,9 +5,9 @@
         <div class="col-3">
             <ul>
             <li><h6>Quick Links</h6></li>
-            <li> <a href="#">Help & Support</a> </li>
-            <li> <a href="#">Contact us</a> </li>
-            <li> <a href="#">Sign Up</a> </li>
+            <li> <a href="help-support.php">Help & Support</a> </li>
+            <li> <a href="contact-us.php">Contact us</a> </li>
+            <li> <a href="sign-up.php">Sign Up</a> </li>
           </ul>
         </div>
         <div class="col-3">
@@ -21,9 +21,9 @@
         <div class="col-3">
           <ul>
             <li><h6>About Swap</h6></li>
-            <li><a href="#">About Us</a></li>
-            <li><a href="#">Terms & Conditions</a></li>
-            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="about-us.php">About Us</a></li>
+            <li><a href="terms-conditions.php">Terms & Conditions</a></li>
+            <li><a href="privacy-policy.php">Privacy Policy</a></li>
           </ul>
         </div>
 

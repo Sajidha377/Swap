@@ -13,19 +13,20 @@
        ?>
      </style>
 
-    <title>Swap | Home</title>
+    <title>Home | Swap</title>
 
   </head>
   <body>
 
+<!-- Main Container -->
     <div class="container">
 
+<!-- Header -->
     <?php
       include("header.php");
      ?>
 
 <!-- Banner -->
-
   <div class="small-container">
     <div class="row">
       <div class="col-6">
@@ -126,6 +127,7 @@
 </div>
 <!-- End of About Swap -->
 
+<!-- Footer -->
 <?php
   include("footer.php");
  ?>
