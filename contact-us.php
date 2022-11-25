@@ -1,3 +1,6 @@
+<?php
+  session_start();
+?>
 <!DOCTYPE html>
 <html>
   <head>
@@ -22,14 +25,25 @@
 
           <!-- Header -->
           <?php
-            include("header.php");
-           ?>
+            if(isset($_SESSION['user_id'])){
+              include("header2.php");
+            }
+            else{
+              include("header.php");
+            }
+            
+          ?>
 
 
-           <!-- Footer -->
-           <?php
-             include("footer.php");
-            ?>
+          <!-- Footer -->
+          <?php
+            if(isset($_SESSION['user_id'])){
+              include("footer2.php");
+            }
+            else{
+              include("footer.php");
+            }
+          ?>
 
         </div>
     <!-- End of Main Container -->

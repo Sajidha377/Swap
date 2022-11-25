@@ -27,7 +27,7 @@
                 </li>
               </ul>
               <a href="login.php" class="btn" style="border-color:#ffffff;">Login</a>
-              <a href="add-product.php" class="btn">Post a Product</a>
+              <a href="add-product1.php" class="btn">Post a Product</a>
             </div>
           </div>
         </nav>

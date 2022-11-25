@@ -2,15 +2,15 @@
   <div class="footer">
       <hr>
       <div class="row">
-        <div class="col-3">
+        <div class="col-3 footer1">
             <ul>
             <li><h6>Quick Links</h6></li>
-            <li> <a href="help-support.php">Help & Support</a> </li>
+            <li> <a href="help-and-support.php">Help & Support</a> </li>
             <li> <a href="contact-us.php">Contact us</a> </li>
             <li> <a href="sign-up.php">Sign Up</a> </li>
           </ul>
         </div>
-        <div class="col-3">
+        <div class="col-3 footer1">
             <ul>
             <li><h6>Socials</h6></li>
             <li> <a href="#">Whatsapp</a> </li>
@@ -18,7 +18,7 @@
             <li> <a href="#">Facebook</a> </li>
           </ul>
         </div>
-        <div class="col-3">
+        <div class="col-3 footer1">
           <ul>
             <li><h6>About Swap</h6></li>
             <li><a href="about-us.php">About Us</a></li>
