@@ -19,6 +19,8 @@ echo "</pre>";
 
   $encrypted_pwd = crypt($access_code, 'x091');
 
+  
+
 //building a dynamic SQL command
 $sql  = "insert into user (user_first_name,user_last_name,user_id,access_code,mobile_number) values(";
 $sql .= "'$user_first_name',";

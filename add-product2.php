@@ -16,12 +16,14 @@ echo "</pre>";
   $product_name = $_REQUEST['product_name'];
   //$condition = $_REQUEST['condition'];
   $description = $_REQUEST['description'];
+  $category = $_REQUEST['category'];
 
 //building a dynamic SQL command
-  $sql  = "insert into product (product_name,description) values(";
+  $sql  = "insert into product (product_name,description,category) values(";
   $sql .= "'$product_name',";
   //$sql .= "'$condition',";
-  $sql .= "'$description')";
+  $sql .= "'$description',";
+  $sql .= "'$category')";
 
 //test display the SQL commands
 //echo $sql;

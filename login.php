@@ -22,12 +22,15 @@
   <body>
 
     <div class="row">
-      <?php
-          if(isset($_SESSION['status'])){
-            echo  "<h6>".$_SESSION['status']."</h6>" ;
-            unset($_SESSION['status']);
+    <div class="col-8">
+      <?php 
+        if(isset($_SESSION['status'])){
+          echo '<div class="alert alert-danger alert-dismissible fade show" role="alert" style="margin-top:20px;">'
+          .$_SESSION['status'].'<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button></div>';
+          unset($_SESSION['status']);
         }
       ?>
+    </div>
     </div>
 
     <!-- Main Container -->
@@ -43,11 +46,11 @@
                 <form action="login2.php" method="post">
                   <div class="mb-1">
                     <label for="exampleInputEmail1" class="form-label">Email</label>
-                    <input type="email" class="form-control" id="user_id" name="user_id" aria-describedby="emailHelp" placeholder="use your email address">
+                    <input type="email" class="form-control" id="user_id" name="user_id" aria-describedby="emailHelp" placeholder="Use your email address">
                   </div>
                   <div class="mb-1">
                     <label for="exampleInputPassword1" class="form-label">Password</label>
-                    <input type="password" class="form-control" id="access_code" name="access_code">
+                    <input type="password" class="form-control" id="access_code" name="access_code" placeholder="Enter your password">
                     <span class="eye" onclick="myFunction()">
                       <i id="hide1" class="fas fa-solid fa-eye"></i>
                       <i id="hide2" class="fas fa-solid fa-eye-slash"></i>

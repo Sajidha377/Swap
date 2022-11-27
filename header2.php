@@ -75,7 +75,7 @@
 
                       </div>
                       <div class="modal-footer">
-                        <a href="edit-account.php">Edit Account</a>
+                        <a href="user-account.php">Edit Account</a>
                         <a href="logout.php">  <i class="fas fa-sign-out-alt"></i> Log Out</a>
                       </div>
                     </div>

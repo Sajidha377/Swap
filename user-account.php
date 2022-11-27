@@ -39,6 +39,17 @@
                    <h2>Profile</h2>
                  </div>
                  <!--End of col-10 account-->
+                 
+                  <div class="col-10 account" style="background-color:#fff;">
+                  <?php 
+                    if(isset($_SESSION['status'])){
+                      echo '<div class="alert alert-success alert-dismissible fade show" role="alert">'
+                      .$_SESSION['status'].'<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button></div>';
+                      unset($_SESSION['status']);
+                    }
+                  ?>
+                  </div>
+
                </div>
                <!-- End of row 2 -->
 
@@ -129,7 +140,7 @@
                         </div>
                         <div class="modal-body">
                           <!-- Form -->
-                          <form id="SignupForm" action="sign-up2.php" method="post" enctype="multipart/form-data">
+                          <form id="SignupForm" action="edit-user-account.php" method="post" enctype="multipart/form-data">
                             <div class="mb-1">
                               <label for="exampleInputFirstName" class="form-label">First Name</label> <span style="color:#ff0000">*</span>
                               <input type="text" value="<?php echo $row['user_first_name']; ?>" class="form-control" id="user_first_name" name="user_first_name" aria-describedby="emailHelp" required>
@@ -142,20 +153,16 @@
                               <label for="exampleInputEmail1" class="form-label">Email</label> <span style="color:#ff0000">*</span>
                               <input type="email" value="<?php echo $row['user_id']; ?>" class="form-control" id="user_id" name="user_id" aria-describedby="emailHelp" required>
                             </div>
+                
                             <div class="mb-1">
-                              <label for="exampleInputPassword1" class="form-label">Password</label> <span style="color:#ff0000">*</span>
-                              <input type="password" value="<?php echo $row['access_code']; ?>" class="form-control" id="access_code" name="access_code" required>
-                              <span class="eye" onclick="myFunction()">
-                                <i id="hide1" class="fas fa-solid fa-eye"></i>
-                                <i id="hide2" class="fas fa-solid fa-eye-slash"></i>
-                              <!-- id="togglePassword" style="position:relative; float:right; margin-left: -25px; margin-top: -25px; margin-right:5px;" -->
-                            </span>  
+                              <label for="exampleInputPassword1" class="form-label">New Password</label> <span style="color:#ff0000">*</span>
+                              <input type="password" value="" class="form-control" id="access_code" name="access_code" required>
                             </div>
                             <div class="mb-1">
                               <label for="exampleInputMobile" class="form-label">Mobile Number</label> <span style="color:#ff0000">*</span>
                               <input type="text" value="<?php echo $row['mobile_number']; ?>" class="form-control" id="mobile_number" name="mobile_number" aria-describedby="emailHelp" required>
                             </div>
-                            <button type="submit" class="btn btn-success" name="button" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Save Changes</button>
+                            <button type="submit" class="btn btn-success" name="button" data-bs-toggle="modal" data-bs-target="#staticBackdrop3">Save Changes</button>
                           </form>
                           <!-- End of form -->
                         </div>

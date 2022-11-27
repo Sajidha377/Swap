@@ -87,15 +87,18 @@
                   </div>
                   <!-- End of col-12 -->
 
-                  <div class="col-12">
-                    <label for="">Add Images</label>
+                  <div class="col-md-6">
+                    <label for="category" class="form-label">Category</label>
+                    <select class="form-select" aria-label="Default select example" name="category">
+                      <option selected value="electronics">Electronics</option>
+                      <option value="books">Books</option>
+                      <option value="furnitures">Furnitures</option>
+                    </select>
                   </div>
-                  <!-- End of col-12 -->
 
-                  <div class="col-md-10">
-                    <div class="row 2">
-                      <input type="file" class="form-control" name="picture" id="picture" value="">
-                    </div>
+                  <div class="col-md-6">
+                    <label for="productName" class="form-label">Add Images</label>
+                    <input type="file" class="form-control" name="picture" id="picture" value="">
                   </div>
                   <!-- End of row 3 -->
 

@@ -2,20 +2,54 @@
 
 8:36 PM 9/13/2022
 Research on UI concepts and color matching theory
+
 9:00 PM 10/1/2022
 Planning of Logo for the website
+
 9:22 PM 10/1/2022
 Sketching of the logo
+
 11:29 PM 10/1/2022
 Desiging of logo
+
 7:27 PM 10/11/2022
 Modifying the Wireframes
+
 7:35 PM 10/12/2022
 Designing the ER-Diagram
+
 9:42 PM 10/12/2022
 Designing of Relation Schema
+
 5:00 PM 10/23/2022
 Completed Homepage wireframe
+
+5:06 PM 10/23/2022
+Committed "Home" page to GitHub
+
+5:27 PM 10/23/2022
+Added 'Activity Diagrams' to GitHub
+
+5:36 PM 10/23/2022
+Added edited 'Activity Diagrams' to GitHub
+
+5:51 PM 10/23/2022
+Added edited 'Activity Diagrams' to GitHub
+
+6:21 PM 10/23/2022
+Completed "Home" page wireframe was added to GitHub
+
+8:30 PM 10/23/2022
+Edited "Home.html" page with css, website logo and banner
+
+10:45 PM 10/23/2022
+Edited "Home.html" file was added to GitHub
+
+
+
+
 8:04 PM 10/24/2022
 Coding of home page
 
+11:43 PM 11/27/2022
+Completed "Edit User Account" feature

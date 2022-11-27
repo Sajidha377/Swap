@@ -46,7 +46,7 @@
                          <h2>Account Created Successfully!</h2>
                          <strong>Successful!</strong>
                          <br />
-
+                         <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                        </div>
                      </div>
 
