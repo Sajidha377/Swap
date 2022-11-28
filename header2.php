@@ -5,7 +5,7 @@
 ?>
 
 <!-- Menu Bar -->
-      <div class="row">
+      <div class="row" style="background:linear-gradient(#f4f4f4, #fff);">
         <div class="topbar">
         <nav class="navbar navbar-expand-lg">
           <div class="container-fluid">
@@ -32,7 +32,7 @@
                   <a class="nav-link" aria-current="page" href="contact-us.php">Contact Us</a>
                 </li>
               </ul>
-              <a href="" class="btn" style="border-color:#ffffff;" data-bs-toggle="modal" data-bs-target="#exampleModal">My Account</a>
+              <a href="" class="btn" style="border:0px;" data-bs-toggle="modal" data-bs-target="#exampleModal">My Account</a>
               <a href="add-product1.php" class="btn">Post a Product</a>
 
               <?php 

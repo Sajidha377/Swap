@@ -13,19 +13,4 @@ echo "</pre>";
 $product_name=$_REQUEST['product_name'];
 $condition=$_REQUEST['condition'];
 
-$sql  = "INSERT into product (product_name,condition) values(";
-$sql .="'product_name',";
-$sql .="'condition')";
-
-echo $sql;
-
-//executing the SQL command
-$x = $mysqli->query($sql);
-
-if($x>0){
-    echo "record successfully added";
-}else{
-    echo "failed";
-}
-
 ?>

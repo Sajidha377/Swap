@@ -1,6 +1,6 @@
 <!-- Menu Bar -->
-      <div class="row">
-        <div class="topbar">
+    <div class="row sticky-top" style="background:linear-gradient(#f4f4f4, #fff);">
+      <div class="topbar">
         <nav class="navbar navbar-expand-lg">
           <div class="container-fluid">
             <a class="navbar-brand" href="index.php"> <img src="images/logo.png" alt="Logo"> </a>
@@ -26,7 +26,7 @@
                   <a class="nav-link" aria-current="page" href="contact-us.php">Contact Us</a>
                 </li>
               </ul>
-              <a href="login.php" class="btn" style="border-color:#ffffff;">Login</a>
+              <a href="login.php" class="btn" style="border:0px;">Login</a>
               <a href="add-product1.php" class="btn">Post a Product</a>
             </div>
           </div>

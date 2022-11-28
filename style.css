@@ -914,6 +914,54 @@
   height:auto;
 }
 
+/*confirm post*/
+.card{
+  margin-top:10px;
+}
+
+.col-10.confirm{
+  text-align:center;
+}
+
+.col-10.confirm h2{
+  font-weight:bold;
+  color:#02444b;
+}
+
+.card-body img{
+  width:100%;
+  height:auto;
+}
+
+.card .btn{
+  margin-top:15px;
+  border-radius:30px;
+}
+
+/* .card-body table, tr, th, td{
+  border:1px solid;
+} */
+
+.card .card-body .col-8 h5{
+  font-weight:bold;
+  color:#02444b;
+}
+
+.card-body table tr{
+  text-align:left;
+  vertical-align:top;
+}
+
+.card-body table{
+  color:#02444b;
+  font-size:14px;
+}
+
+.card-body table h5{
+  font-weight:bold;
+}
+
+
 /*Footer*/
 .footer{
   padding-top:50px;

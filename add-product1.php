@@ -1,5 +1,4 @@
 <?php
-
   require("validate-user.php");
 ?>
 
@@ -41,7 +40,7 @@
         </div>
         <!-- End of row 1 -->
 
-        <div class="col-10 product">
+        <div class="col-10 product" style="background-color:#fff;">
         <?php 
           if(isset($_SESSION['status'])){
             echo '<div class="alert alert-success alert-dismissible fade show" role="alert">'
@@ -120,6 +119,22 @@
               </div>
               <!-- End of col-10 product1 -->
 
+              <?php 
+                $user_id = $_SESSION['user_id'];
+
+                //building the dynamic SQL command
+                $sql = "select * from user where user_id='$user_id'";
+
+                //executing the SQL command
+                $rs = $mysqli->query($sql);
+
+
+                if(mysqli_num_rows($rs) > 0){
+
+                  //fetching the records
+                  $row = mysqli_fetch_assoc($rs);
+                ?>
+
               <div class="col-10 product2">
                 <table>
                   <tbody>
@@ -127,25 +142,29 @@
                       <th>Name</th>
                     </tr>
                     <tr>
-                      <td>John Davis</td>
+                      <td><?php echo $row['user_first_name']; ?> <?php echo $row['user_last_name']; ?></td>
                     </tr>
                     <tr>
                       <th>Email</th>
                     </tr>
                     <tr>
-                      <td>john123@gmail.com</td>
+                      <td><?php echo $row['user_id']; ?></td>
                     </tr>
                     <tr>
                       <th>Mobile Number</th>
                     </tr>
                     <tr>
-                      <td>077 123 4567</td>
+                      <td><?php echo $row['mobile_number']; ?></td>
                     </tr>
                   </tbody>
                 </table>
                 <!-- End of table -->
               </div>
               <!-- End of col-10 product2 -->
+
+               <?php
+                    }
+                  ?>
 
             </div>
             <!-- End of col-10 product -->
