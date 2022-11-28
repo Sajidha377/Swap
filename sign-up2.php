@@ -36,13 +36,14 @@ $sql .= "'$mobile_number')";
 $x = $mysqli->query($sql);
 
 if($x>0){
-  $_SESSION['user_id'] = $user_id;
+  $_SESSION['user_id'] = $user_id;  
   //echo "record successfully added";
-  header("location:sign-up3.php?status=pass");
+  header("location:index.php?status=pass");
 }
 else{
+  $_SESSION['status'] = "Sign Up Failed!!";
   //echo "adding record failed";
-  header("location:signup3.php?status=fail");
+  header("location:sign-up.php?status=fail");
 }
 
 ?>
