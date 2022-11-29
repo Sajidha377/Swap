@@ -1,4 +1,8 @@
-<?php 
+<?php
+
+  //connect to database server
+  require("db_connection.php");
+
   require("code_lib.inc.php");
 ?>
 <!DOCTYPE html>
@@ -64,7 +68,7 @@
             </div>
           </div>
         </nav>
-      </div>  
+      </div>
       <!-- End of row1 -->
 
       <div class="small-container">
@@ -74,47 +78,58 @@
             <h2>Confirm Post</h2>
           </div>
 
+
           <?php
+
+            //building the dynamic SQL command
+            $sql = "select * from product";
+
+            //executing the SQL command
+            $rs = $mysqli->query($sql);
+
+            while($row = mysqli_fetch_assoc($rs)){
 
           ?>
 
           <div class="col-12">
             <div class="card">
               <div class="card-header">
-                <?php echo ($_REQUEST)['user_id']; ?>
+
               </div>
               <div class="card-body">
 
                 <div class="row 3">
                   <div class="col-4">
-                    <?php echo ($_FILES)['picture']; ?>
+                    <img src="images/thumb/<?php echo $row['picture']; ?>" alt="">
                   </div>
 
                   <div class="col-8">
+
                     <table>
                       <tbody>
                         <tr>
                           <th>Product Name</th>
                           <th>-</th>
-                          <td><?php echo ($_REQUEST)['product_name']; ?></td>
+                          <td><?php echo $row['product_name']; ?></td>
                         </tr>
                         <tr>
                           <th>Condition</th>
                           <th>-</th>
-                          <td><?php echo ($_REQUEST)['condition']; ?></td>
+                          <td><?php echo $row['product_condition']; ?></td>
                         </tr>
                         <tr>
                           <th>Description</th>
                           <th>-</th>
-                          <td><?php echo ($_REQUEST)['description']; ?></td>
+                          <td><?php echo $row['description']; ?></td>
                         </tr>
                         <tr>
                           <th>Category</th>
                           <th>-</th>
-                          <td><?php echo ($_REQUEST)['category']; ?></td>
+                          <td><?php echo $row['category']; ?></td>
                         </tr>
                       </tbody>
                     </table>
+
                   </div>
                   <!-- End of col-8 -->
 
@@ -126,12 +141,15 @@
             </div>
             <!-- End of card -->
 
-            
-
           </div>
           <!-- End of col-12 -->
 
-          
+          <?php
+
+           }
+
+          ?>
+
         </div>
         <!-- End of row 2 -->
       </div>
