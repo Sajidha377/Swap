@@ -40,14 +40,16 @@
         </div>
         <!-- End of row 1 -->
 
-        <div class="col-10 product" style="background-color:#fff;">
-        <?php 
-          if(isset($_SESSION['status'])){
-            echo '<div class="alert alert-success alert-dismissible fade show" role="alert">'
-            .$_SESSION['status'].'<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button></div>';
-            unset($_SESSION['status']);
-          }
-        ?>
+        <div class="row">
+          <div class="col-10 product" style="background-color:#fff;">
+            <?php
+              if(isset($_SESSION['status'])){
+                echo '<div class="alert alert-warning alert-dismissible fade show" role="alert" style="margin-top:20px;">'
+                .$_SESSION['status'].'<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button></div>';
+                unset($_SESSION['status']);
+              }
+            ?>
+          </div>
         </div>
 
         <div class="row 2">
@@ -65,44 +67,42 @@
 
                   <div class="col-md-6">
                     <label for="productName" class="form-label">Product Name</label>
-                    <input type="text" class="form-control" id="product_name" name="product_name">
+                    <input type="text" class="form-control" id="product_name" name="product_name" required>
                   </div>
                   <!-- End of col-md-6 -->
 
                   <div class="col-md-6">
-                  <label for="condition" class="form-label">Condition</label> <br>
-                    <div class="form-check form-check-inline">
-                    <input type="radio" class="form-check-input" name="condition" id="condition" value="New">
-                    <label for="new" class="form-check-label">New</label>
-                    </div>
-
-                    <div class="form-check form-check-inline">
-                    <input type="radio" class="form-check-input" name="condition" id="condition" value="Used">
-                    <label for="used" class="form-check-label">Used</label>
-                    </div>
+                    <label for="productCondition" class="form-label">Condition</label>
+                    <select class="form-select" name="product_condition" required>
+                      <option selected value="new">New</option>
+                      <option value="used">Used</option>
+                    </select>
                   </div>
                   <!-- End of col-md-6 -->
 
                   <div class="col-12">
                     <label for="description" class="form-label">Description</label>
-                    <textarea class="form-control" name="description" id="description" rows="4" cols="80"></textarea>
+                    <textarea class="form-control" name="description" id="description" rows="4" cols="80" required></textarea>
                   </div>
                   <!-- End of col-12 -->
 
                   <div class="col-md-6">
                     <label for="category" class="form-label">Category</label>
-                    <select class="form-select" aria-label="Default select example" name="category">
-                      <option selected value="electronics">Electronics</option>
-                      <option value="books">Books</option>
-                      <option value="furnitures">Furnitures</option>
+                    <select class="form-select" name="category" required>
+                      <option selected value="electronic">Electronics</option>
+                      <option value="book">Books</option>
+                      <option value="furniture">Furnitures</option>
                     </select>
                   </div>
+                  <!-- End of col-md-6 -->
 
                   <div class="col-md-6">
-                    <label for="productName" class="form-label">Add Images</label>
-                    <input type="file" class="form-control" name="picture" id="picture" value="">
+                    <label for="productName" class="form-label" >Add Images</label>
+                    <input type="file" class="form-control" name="picture" id="picture" value="" required>
                   </div>
                   <!-- End of row 3 -->
+
+                  <input type="email" style="visibility:hidden;" value="<?php echo $_SESSION['user_id']; ?>" class="form-control" id="user_id" name="user_id">
 
                 </form>
                 <!-- End of form -->
@@ -119,7 +119,7 @@
               </div>
               <!-- End of col-10 product1 -->
 
-              <?php 
+              <?php
                 $user_id = $_SESSION['user_id'];
 
                 //building the dynamic SQL command

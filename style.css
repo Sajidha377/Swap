@@ -524,10 +524,10 @@
 }
 
 .col-2.signup .eye{
-  position:relative; 
+  position:relative;
   float:right;
-  margin-left: -25px; 
-  margin-top: -23px; 
+  margin-left: -25px;
+  margin-top: -23px;
   margin-right:10px;
 }
 
@@ -641,10 +641,127 @@
 }
 
 .col-2.login .eye{
-  position:relative; 
+  position:relative;
   float:right;
-  margin-left: -25px; 
-  margin-top: -23px; 
+  margin-left: -25px;
+  margin-top: -23px;
+  margin-right:10px;
+}
+
+#hide1{
+  display:none;
+}
+
+/*admin-login*/
+.container.admin-login{
+  width:100%;
+  min-height:100vh;
+  background:linear-gradient(-135deg, transparent, #f4f4f4);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:5%;
+  position:relative;
+}
+
+.admin-login-box{
+  display:flex;
+  align-items:center;
+  width:100%;
+  max-width:800px;
+  flex-wrap:wrap;
+  height:auto;
+}
+
+.col-2.admin-login{
+  background-color:#f4f4f4;
+  padding:40px 8%;
+  min-width:250px;
+  border-radius:0px 10px 10px 0px;
+  padding-top:15%;
+  padding-bottom:25.5%;
+}
+
+.col-2.admin-login h5{
+  color:#02444b;
+  font-weight:bold;
+}
+
+.col-2.admin-login p{
+  font-size:11px;
+  color:#02444b;
+}
+
+.col-2.admin-login p a{
+  text-decoration:none;
+}
+
+.col-1.admin-login, .col-2.admin-login{
+  flex-basis:50%;
+  flex-grow:1;
+}
+
+.col-1.admin-login img{
+  display:absolute;
+  width:100%;
+  height:auto;
+  display:block;
+  border-radius:10px 0px 0px 10px;
+}
+
+.col-2.admin-login label{
+  font-size:14px;
+  color:#02444b;
+  font-weight:600;
+}
+
+.col-2.admin-login .form-control{
+  font-size:14px;
+}
+
+.col-2.admin-login span{
+  font-size:11px;
+  color:#02444b;
+}
+
+.col-2.admin-login span a{
+  text-decoration:none;
+}
+
+.col-2.admin-login .mb-1{
+  align-items:flex-start;
+  text-align:left;
+}
+
+.col-2.admin-login .mb-1.form-check label{
+  font-size:11px;
+  color:#02444b;
+}
+
+.col-2.admin-login .mb-1.form-check label a{
+  text-decoration:none;
+}
+
+.col-2.admin-login .mb-1 .form-control{
+  height:30px;
+}
+
+.col-2.admin-login button{
+  background-color:#02444b;
+  border:none;
+  border-radius:30px;
+  font-size:13px;
+  font-weight:bold;
+  display:block;
+  width:100%;
+  margin-top:20px;
+}
+
+.col-2.admin-login .eye{
+  position:relative;
+  float:right;
+  margin-left: -25px;
+  margin-top: -23px;
   margin-right:10px;
 }
 
@@ -750,10 +867,10 @@
 }
 
 .col-10.account .modal .mb-1 .eye{
-  position:relative; 
+  position:relative;
   float:right;
-  margin-left: -25px; 
-  margin-top: -27px; 
+  margin-left: -25px;
+  margin-top: -27px;
   margin-right:10px;
 }
 

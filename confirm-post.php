@@ -1,4 +1,6 @@
-
+<?php 
+  require("code_lib.inc.php");
+?>
 <!DOCTYPE html>
 <html>
   <head>
@@ -72,37 +74,50 @@
             <h2>Confirm Post</h2>
           </div>
 
+          <?php
+
+          ?>
+
           <div class="col-12">
             <div class="card">
               <div class="card-header">
-              <?php echo $_REQUEST['user_id']; ?>
+                <?php echo ($_REQUEST)['user_id']; ?>
               </div>
               <div class="card-body">
 
                 <div class="row 3">
                   <div class="col-4">
-                    <img src="images/speaker.png" alt="">
+                    <?php echo ($_FILES)['picture']; ?>
                   </div>
 
                   <div class="col-8">
-                    <h5 class="card-title"><?php echo $_REQUEST['product_name']; ?></h5>
                     <table>
                       <tbody>
                         <tr>
-                          <th>Condition -</th>
-                          <td><?php echo $_REQUEST['condition']; ?></td>
+                          <th>Product Name</th>
+                          <th>-</th>
+                          <td><?php echo ($_REQUEST)['product_name']; ?></td>
                         </tr>
                         <tr>
-                          <th>Category -</th>
-                          <td>Electronics</td>
+                          <th>Condition</th>
+                          <th>-</th>
+                          <td><?php echo ($_REQUEST)['condition']; ?></td>
                         </tr>
                         <tr>
-                          <th>Description -</th>
-                          <td>Lorem ipsum dolor sit amet consectetur, adipisicing elit. </td>
+                          <th>Description</th>
+                          <th>-</th>
+                          <td><?php echo ($_REQUEST)['description']; ?></td>
+                        </tr>
+                        <tr>
+                          <th>Category</th>
+                          <th>-</th>
+                          <td><?php echo ($_REQUEST)['category']; ?></td>
                         </tr>
                       </tbody>
                     </table>
                   </div>
+                  <!-- End of col-8 -->
+
                 </div>
                 <!-- End of row 3 -->
                 <a href="#" class="btn btn-primary">Confirm</a>
