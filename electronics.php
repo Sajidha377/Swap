@@ -1,6 +1,11 @@
 <?php
   session_start();
+
+    //connect to database server
+    require("db_connection.php");
+
 ?>
+
 <!DOCTYPE html>
 <html>
   <head>
@@ -31,7 +36,7 @@
         else{
           include("header.php");
         }
-        
+
        ?>
 
     <!-- Container md -->
@@ -107,21 +112,44 @@
 
      <div class="row">
        <div class="col-10 category">
+
+         <?php
+
+            $keyword = 'yes';
+            $keyword1 = 'electronic';
+
+           //building the dynamic SQL command
+           $sql = "SELECT * FROM user INNER JOIN product ON user.user_id = product.user_id WHERE confirmation LIKE '%$keyword%' and category LIKE '%$keyword1%'";
+
+           //executing the SQL command
+           $rs = $mysqli->query($sql);
+
+           while($row = mysqli_fetch_assoc($rs)){
+
+         ?>
+
         <div class="col-10 category1">
           <div class="col-5 category">
-            <img src="images/speaker.png" alt="">
+            <img src="images/large/<?php echo $row['picture']; ?>" alt="">
           </div>
           <div class="col-5 category">
             <table>
               <tbody>
                 <tr>
-                  <td> <h5>Speaker</h5> </td>
+                  <td> <h5><?php echo $row['product_name']; ?></h5> </td>
                 </tr>
                 <tr>
-                  <td> <p> <strong>Condition -</strong> used </p> </td>
+                  <th>Condition</th>
+                  <th>-</th>
+                  <td><?php echo $row['product_condition']; ?></td>
                 </tr>
                 <tr>
-                  <td> <p> <strong>For trade by -</strong> David </p> </td>
+                  <th>For trade by</th>
+                  <th>-</th>
+                  <td><?php echo $row['user_first_name']; ?> <?php echo $row['user_last_name']; ?></td>
+                </tr>
+                <tr>
+                  <td style="visibility:hidden;"><?php echo $row['user_id']; ?></td>
                 </tr>
                 <tr>
                   <td> <a href="" class="btn">View</a> </td>
@@ -130,6 +158,13 @@
             </table>
           </div>
         </div>
+        <!-- end of col-10 category1 -->
+
+        <?php
+
+         }
+
+        ?>
        </div>
      </div>
      <!--  -->
