@@ -1,5 +1,8 @@
 <?php
 
+//start the session
+session_start();
+
 //connect the database server
 require("db_connection.php");
 
@@ -13,19 +16,21 @@ require("code_lib.inc.php");
   $sql  = "update product set ";
   $sql .= "confirmation='$confirmation' where product_id='$product_id'";
 
-  echo $sql;
+  // echo $sql;
 
   //execute the sql command
   $x = $mysqli->multi_query($sql);
 
   if($x>0){
 
-      echo "record successfully updated";
-    // header("location:add-product-3.php?status=pass");
+      // echo "record successfully updated";
+    $_SESSION['status'] = "Record confirmed!!";
+    header("location:confirm-post.php?status=pass");
   }
   else{
-    echo "updating record failed";
-    // header("location:add-product-3.php?status=fail");
+    // echo "updating record failed";
+    $_SESSION['status'] = "Confirming record failed!!";
+    header("location:confirm-post.php?status=pass");
   }
 
  ?>

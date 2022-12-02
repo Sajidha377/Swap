@@ -4,7 +4,11 @@
   require("db_connection.php");
 
   require("code_lib.inc.php");
+
+  session_start();
+
 ?>
+
 <!DOCTYPE html>
 <html>
   <head>
@@ -76,6 +80,9 @@
 
           <div class="col-10 confirm">
             <h2>Confirm Post</h2>
+          </div>
+          
+          <div class="col-10 confirm">
             <?php
               if(isset($_SESSION['status'])){
                 echo '<div class="alert alert-warning alert-dismissible fade show" role="alert" style="margin-top:20px;">'
