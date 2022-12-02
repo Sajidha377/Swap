@@ -17,14 +17,16 @@
   $product_condition = $_REQUEST['product_condition'];
   $description = $_REQUEST['description'];
   $category = $_REQUEST['category'];
+  $confirmation = $_REQUEST['confirmation'];
   $user_id = $_REQUEST['user_id'];
 
   //building a dynamic SQL command
-  $sql  = "insert into product (product_name,product_condition,description,category,user_id) values(";
+  $sql  = "insert into product (product_name,product_condition,description,category,confirmation,user_id) values(";
   $sql .= "'$product_name',";
   $sql .= "'$product_condition',";
   $sql .= "'$description',";
   $sql .= "'$category',";
+  $sql .= "'$confirmation',";
   $sql .= "'$user_id')";
 
   //test display the SQL commands
@@ -53,7 +55,7 @@
         $z = $mysqli->query($sql2);
 
         //copying the images to thumb folder and resizing it
-        copy("images/large/".$destination, "images/thumb/".$destination);
+        copy("images/large/".$destination);
 
         //resizing the images
         resizeThumbPicture("images/thumb/",$destination);
@@ -63,7 +65,7 @@
     }
 
     // echo "record successfully added";
-    $_SESSION['status'] = "Wait for confirmation!!";
+    $_SESSION['status'] = "Product will be posted after verification!!";
     header("location:add-product1.php?status=pass");
   }
   else{

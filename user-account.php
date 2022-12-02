@@ -39,9 +39,9 @@
                    <h2>Profile</h2>
                  </div>
                  <!--End of col-10 account-->
-                 
+
                   <div class="col-10 account" style="background-color:#fff;">
-                  <?php 
+                  <?php
                     if(isset($_SESSION['status'])){
                       echo '<div class="alert alert-success alert-dismissible fade show" role="alert">'
                       .$_SESSION['status'].'<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button></div>';
@@ -69,13 +69,73 @@
                      <!-- End of col-2 account -->
 
                      <div class="col-8 account">
-                       
+
+                       <div class="row 5">
+                         <div class="col-3 account">
+                           <img src="images/book.png" alt="">
+                           <table>
+                             <tbody>
+                               <tr>
+                                 <th>Name -</th>
+                                 <td></td>
+                               </tr>
+                               <tr>
+                                 <th>Condition -</th>
+                                 <td></td>
+                               </tr>
+                               <tr>
+                                 <th>Category -</th>
+                                 <td></td>
+                               </tr>
+                             </tbody>
+                           </table>
+                         </div>
+                         <div class="col-3 account">
+                           <img src="images/books.png" alt="">
+                           <table>
+                             <tbody>
+                               <tr>
+                                 <th>Name -</th>
+                                 <td></td>
+                               </tr>
+                               <tr>
+                                 <th>Condition -</th>
+                                 <td></td>
+                               </tr>
+                               <tr>
+                                 <th>Category -</th>
+                                 <td></td>
+                               </tr>
+                             </tbody>
+                           </table>
+                         </div>
+                         <div class="col-3 account">
+                           <img src="images/banner-books.png" alt="">
+                           <table>
+                             <tbody>
+                               <tr>
+                                 <th>Name -</th>
+                                 <td></td>
+                               </tr>
+                               <tr>
+                                 <th>Condition -</th>
+                                 <td></td>
+                               </tr>
+                               <tr>
+                                 <th>Category -</th>
+                                 <td></td>
+                               </tr>
+                             </tbody>
+                           </table>
+                         </div>
+                       </div>
+                       <!-- End of row 5 -->
 
                      </div>
                    </div>
                    <!-- End or row 4 -->
 
-                   <?php 
+                   <?php
                     $user_id = $_SESSION['user_id'];
 
                     //building the dynamic SQL command
@@ -153,7 +213,7 @@
                               <label for="exampleInputEmail1" class="form-label">Email</label> <span style="color:#ff0000">*</span>
                               <input type="email" value="<?php echo $row['user_id']; ?>" class="form-control" id="user_id" name="user_id" aria-describedby="emailHelp" required>
                             </div>
-                
+
                             <div class="mb-1">
                               <label for="exampleInputPassword1" class="form-label">New Password</label> <span style="color:#ff0000">*</span>
                               <input type="password" value="" class="form-control" id="access_code" name="access_code" required>

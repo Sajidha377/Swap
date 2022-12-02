@@ -878,6 +878,19 @@
   display:none;
 }
 
+.col-3.account{
+  display:inline-block;
+}
+
+.col-3.account img{
+  width:100%;
+  height:150px;
+}
+
+.col-3.account table th{
+  font-size:11px;
+}
+
 /*product*/
 .col-10.product{
   background-color:#f4f4f4;
@@ -1032,10 +1045,6 @@
 }
 
 /*confirm post*/
-.card{
-  margin-top:10px;
-}
-
 .col-10.confirm{
   text-align:center;
 }
@@ -1045,37 +1054,27 @@
   color:#02444b;
 }
 
-.card-body img{
-  width:50%;
+.col-12.confirm .alert{
+  background-color:#f4f4f4;
+  color:#02444b;
+}
+
+.col-12.confirm .alert img{
+  min-width:200px;
   height:auto;
+  padding-bottom:10px;
 }
 
-.card .btn{
-  margin-top:15px;
-  border-radius:30px;
-}
-
-/* .card-body table, tr, th, td{
-  border:1px solid;
-} */
-
-.card .card-body .col-8 h5{
-  font-weight:bold;
+.col-12.confirm input{
+  border:none;
+  background-color:#f4f4f4;
   color:#02444b;
 }
 
-.card-body table tr{
-  text-align:left;
-  vertical-align:top;
-}
-
-.card-body table{
+.col-8.confirm input{
+  border:none;
+  background-color:#f4f4f4;
   color:#02444b;
-  font-size:14px;
-}
-
-.card-body table h5{
-  font-weight:bold;
 }
 
 

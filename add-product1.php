@@ -102,6 +102,11 @@
                   </div>
                   <!-- End of row 3 -->
 
+                  <select class="form-select" name="confirmation" style="visibility:hidden;">
+                    <option selected value="no">No</option>
+                    <option value="yes">yes</option>
+                  </select>
+
                   <input type="email" style="visibility:hidden;" value="<?php echo $_SESSION['user_id']; ?>" class="form-control" id="user_id" name="user_id">
 
                 </form>

@@ -76,13 +76,28 @@
 
           <div class="col-10 confirm">
             <h2>Confirm Post</h2>
+            <?php
+              if(isset($_SESSION['status'])){
+                echo '<div class="alert alert-warning alert-dismissible fade show" role="alert" style="margin-top:20px;">'
+                .$_SESSION['status'].'<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button></div>';
+                unset($_SESSION['status']);
+              }
+            ?>
+          </div>
+
+          <div class="row">
+            <div class="col-10 product" style="background-color:#fff;">
+
+            </div>
           </div>
 
 
           <?php
 
+            $keyword = 'no';
+
             //building the dynamic SQL command
-            $sql = "select * from product";
+            $sql = "select * from product where confirmation like '%$keyword%'";
 
             //executing the SQL command
             $rs = $mysqli->query($sql);
@@ -91,22 +106,23 @@
 
           ?>
 
-          <div class="col-12">
-            <div class="card">
-              <div class="card-header">
+          <form class="form" action="confirm-post2.php" method="post" enctype="multipart/form-data">
+          <div class="col-12 confirm">
+            <div class="alert alert-dismissible fade show" role="alert">
+              <strong><h5 id="user_id"><?php echo $row['user_id']; ?></h5></strong>
+              <div class="row 3">
+                <div class="col-4">
+                  <img src="images/large/<?php echo $row['picture']; ?>" alt="">
+                </div>
 
-              </div>
-              <div class="card-body">
-
-                <div class="row 3">
-                  <div class="col-4">
-                    <img src="images/thumb/<?php echo $row['picture']; ?>" alt="">
-                  </div>
-
-                  <div class="col-8">
-
+                <div class="col-8 confirm">
                     <table>
                       <tbody>
+                          <tr>
+                            <th>Product ID </th>
+                            <th>-</th>
+                          <td> <input type="text" name="product_id" value="<?php echo $row['product_id']; ?> "> </td>
+                        </tr>
                         <tr>
                           <th>Product Name</th>
                           <th>-</th>
@@ -127,20 +143,30 @@
                           <th>-</th>
                           <td><?php echo $row['category']; ?></td>
                         </tr>
+                        <tr>
+                          <th>Confirm</th>
+                          <th>-</th>
+                          <td> <select class="form-select" name="confirmation">
+                            <option value="<?php echo $row['confirmation']; ?>"><?php echo $row['confirmation']; ?></option>
+                            <option value="yes">Yes</option>
+                          </select></td>
+                        </tr>
                       </tbody>
                     </table>
 
-                  </div>
-                  <!-- End of col-8 -->
+
 
                 </div>
-                <!-- End of row 3 -->
-                <a href="#" class="btn btn-primary">Confirm</a>
-                <a href="#" class="btn btn-danger">Delete</a>
+                <!-- End of col-8 -->
               </div>
-            </div>
-            <!-- End of card -->
+              <!-- End of row 3 -->
 
+              <button type="submit" class="btn btn-success" data-bs-dismiss="alert" aria-label="Close">Save</button></a>
+              <a href="admin-delete-post.php?a=<?php echo $row['product_id']; ?>"><button type="button" class="btn btn-danger" data-bs-dismiss="alert" aria-label="Close">Delete</button></a>
+
+              </form>
+
+            </div>
           </div>
           <!-- End of col-12 -->
 
@@ -157,6 +183,7 @@
 
     </div>
     <!-- End of main container -->
+
 
   </body>
 </html>
