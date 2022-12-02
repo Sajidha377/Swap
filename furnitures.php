@@ -116,8 +116,20 @@
             $keyword = 'yes';
             $keyword1 = 'furniture';
 
+            $limit = 5;
+            $page = isset($_GET['page']) ? $_GET['page'] : 1;
+            $start = ($page - 1) * $limit;
+
            //building the dynamic SQL command
-           $sql = "SELECT * FROM user INNER JOIN product ON user.user_id = product.user_id WHERE confirmation LIKE '%$keyword%' and category LIKE '%$keyword1%'";
+           $sql = "SELECT * FROM user INNER JOIN product ON user.user_id = product.user_id WHERE confirmation LIKE '%$keyword%' and category LIKE '%$keyword1%' LIMIT $start, $limit";
+
+           $sql2 = $mysqli->query("SELECT count(product_id) AS product_id FROM product");
+           $proCount = $sql2->fetch_all(MYSQLI_ASSOC);
+           $total = $proCount[0]['product_id'];
+           $pages = ceil($total / $limit);
+
+           $Previous = $page - 1;
+           $Next = $page + 1;
 
            //executing the SQL command
            $rs = $mysqli->query($sql);
@@ -174,14 +186,15 @@
        <div class="col-10 category">
          <nav aria-label="Page navigation example">
            <ul class="pagination justify-content-end">
-             <li class="page-item disabled">
-               <a class="page-link">&larr; Previous</a>
-             </li>
-             <li class="page-item"><a class="page-link" href="#">1</a></li>
-             <li class="page-item"><a class="page-link" href="#">2</a></li>
-             <li class="page-item"><a class="page-link" href="#">3</a></li>
              <li class="page-item">
-               <a class="page-link" href="#">Next &rarr;</a>
+               <a class="page-link" aria-label="Previous" href="furnitures.php?page=<?= $Previous; ?>">&larr; Previous</a>
+             </li>
+             <?php for($i = 1; $i <= $pages; $i++) : ?>
+                <li class="page-item"><a class="page-link" href="furnitures.php?page=<?= $i; ?>"><?= $i; ?></a></li>
+            <?php endfor; ?>
+
+             <li class="page-item">
+               <a class="page-link" aria-label="Next" href="furnitures.php?page=<?= $Next; ?>">Next &rarr;</a>
              </li>
            </ul>
          </nav>
