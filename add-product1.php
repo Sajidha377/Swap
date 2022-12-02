@@ -86,6 +86,21 @@
                   </div>
                   <!-- End of col-12 -->
 
+
+
+                  <div class="col-md-6"  style="display:flex; display:inline-block;">
+                    <label for="productName" class="form-label">Add Images</label>
+                    <input type="file" class="form-control" name="picture" id="picture" value="" required onchange="previewImage(this.files[0])">
+                  </div>
+                  <!-- End of col-md-6 -->
+
+                  <div class="col-md-6">
+                    <div class="image-placeholder">
+                      <img src="" alt="" style="min-width:200px; height:200px;" onerror=this.src="https://via.placeholder.com/150">
+                    </div>
+                  </div>
+                  <!-- End of col-md-6 -->
+
                   <div class="col-md-6">
                     <label for="category" class="form-label">Category</label>
                     <select class="form-select" name="category" required>
@@ -97,15 +112,12 @@
                   <!-- End of col-md-6 -->
 
                   <div class="col-md-6">
-                    <label for="productName" class="form-label" >Add Images</label>
-                    <input type="file" class="form-control" name="picture" id="picture" value="" required>
+                    <select class="form-select" name="confirmation" style="visibility:hidden;">
+                      <option selected value="no">No</option>
+                      <option value="yes">yes</option>
+                    </select>
                   </div>
-                  <!-- End of row 3 -->
-
-                  <select class="form-select" name="confirmation" style="visibility:hidden;">
-                    <option selected value="no">No</option>
-                    <option value="yes">yes</option>
-                  </select>
+                  <!-- End of col-md-6 -->
 
                   <input type="email" style="visibility:hidden;" value="<?php echo $_SESSION['user_id']; ?>" class="form-control" id="user_id" name="user_id">
 
@@ -198,5 +210,20 @@
 
     </div>
     <!-- End of main container -->
+
+    <script type="text/javascript">
+      function previewImage(image){
+
+        let reader = new FileReader();
+
+        reader.readAsDataURL(image);
+        reader.onload = function(event){
+          if(this.readyState == 2){
+            document.querySelector(".image-placeholder img").src = event.target.result;
+          }
+        }
+      }
+    </script>
+
   </body>
 </html>
