@@ -81,7 +81,7 @@
           <div class="col-10 confirm">
             <h2>Confirm Post</h2>
           </div>
-          
+
           <div class="col-10 confirm">
             <?php
               if(isset($_SESSION['status'])){
@@ -155,7 +155,7 @@
                           <th>-</th>
                           <td> <select class="form-select" name="confirmation">
                             <option value="<?php echo $row['confirmation']; ?>"><?php echo $row['confirmation']; ?></option>
-                            <option value="yes">Yes</option>
+                            <option value="Yes">Yes</option>
                           </select></td>
                         </tr>
                       </tbody>

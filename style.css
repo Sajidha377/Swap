@@ -899,6 +899,26 @@
   font-size:12px;
 }
 
+.col-8.account .card table tr, th, td {
+  /* border:1px solid; */
+}
+
+.col-8.account .card button{
+  background-color:#02444b;
+  color:#ffffff;
+  border-radius:30px;
+  font-size:13px;
+  display:inline-block;
+  font-weight:bold;
+  line-height:15px;
+  margin-right:10px;
+  border-style:none;
+  padding-left:10px;
+  padding-right:10px;
+  padding-top:5px;
+  padding-bottom:5px;
+}
+
 /*product*/
 .col-10.product{
   background-color:#f4f4f4;

@@ -63,6 +63,7 @@
                      <ul>
                        <li> <a href="#" data-bs-toggle="modal" data-bs-target="#staticBackdrop1">Account Details</a> </li>
                        <li> <a href="#" data-bs-toggle="modal" data-bs-target="#staticBackdrop2">Edit Account</a> </li>
+                       <li> <a href="#" data-bs-toggle="modal" data-bs-target="#staticBackdrop3">Change Password</a> </li>
                        <li> <a href="add-product1.php">Post a Product</a> </li>
                        <li> <a href="logout.php">  <i class="fas fa-sign-out-alt"></i> Log Out</a> </li>
                      </ul>
@@ -71,7 +72,7 @@
                    <!-- End of col-2 -->
 
 
-
+                   <!-- Display Products -->
                    <div class="col-8 account">
                      <div class="row 5">
 
@@ -111,7 +112,7 @@
                                    <tr>
                                      <th>Description</th>
                                      <th>-</th>
-                                     <td><?php echo $row['description']; ?></td>
+                                     <td stlye="width:100%; overflow:hidden;"><?php echo $row['description']; ?></td>
                                    </tr>
                                    <tr>
                                      <th>Category</th>
@@ -120,21 +121,30 @@
                                    </tr>
                                  </tbody>
                                </table>
+                                 <table style="width:100%;">
+                                   <tbody>
+                                     <tr style="text-align:left;">
+                                       <th><button class="editbtn" type="button" name="button" data-id="<?php echo $row['product_id']; ?>">Edit</button></th>
+                                     </tr>
+                                   </tbody>
+                                 </table>
+
+
                               </div>
                             </div>
                           </div>
                         </div>
+                        <!-- End of card mb-3 -->
 
-                       <?php
-
-                        }
-
-                       ?>
+                        <?php
+                          }
+                         ?>
 
                      </div>
                      <!-- End of row 5 -->
                    </div>
                    <!-- End of col-8 -->
+                   <!-- End of display products -->
 
                  </div>
                  <!-- End of row 4 -->
@@ -142,7 +152,28 @@
                <!-- End of col-10 -->
              </div>
              <!-- End of row 3 -->
+             <!-- ***********************************End of display products************************************** -->
 
+             <!-- Edit products modal -->
+             <div class="modal fade" id="proModal" role="dialog">
+               <div class="modal-dialog">
+                 <div class="modal-content">
+                   <div class="modal-header">
+                     <h4 class="modal-title">Edit Product Details</h4>
+                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                   </div>
+                   <div class="modal-body">
+                   </div>
+                   <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                   </div>
+                 </div>
+               </div>
+             </div>
+
+
+
+             <!-- My Account Modal -->
              <?php
               $user_id = $_SESSION['user_id'];
 
@@ -197,8 +228,9 @@
              </div>
              <!-- End of My Account modal -->
 
+
              <!-- Edit Account Modal -->
-             <div class="modal fade" id="staticBackdrop2" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+             <div class="modal fade" id="staticBackdrop2" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel2" aria-hidden="true">
                <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
                  <div class="modal-content">
                    <div class="modal-header">
@@ -222,14 +254,10 @@
                        </div>
 
                        <div class="mb-1">
-                         <label for="exampleInputPassword1" class="form-label">New Password</label> <span style="color:#ff0000">*</span>
-                         <input type="password" value="" class="form-control" id="access_code" name="access_code" required>
-                       </div>
-                       <div class="mb-1">
                          <label for="exampleInputMobile" class="form-label">Mobile Number</label> <span style="color:#ff0000">*</span>
                          <input type="text" value="<?php echo $row['mobile_number']; ?>" class="form-control" id="mobile_number" name="mobile_number" aria-describedby="emailHelp" required>
                        </div>
-                       <button type="submit" class="btn btn-success" name="button" data-bs-toggle="modal" data-bs-target="#staticBackdrop3">Save Changes</button>
+                       <button type="submit" class="btn btn-success" name="button" data-bs-toggle="modal" data-bs-target="#staticBackdrop2">Save Changes</button>
                      </form>
                      <!-- End of form -->
                    </div>
@@ -241,10 +269,45 @@
              </div>
              <!-- End of Edit account modal -->
 
-
              <?php
                }
              ?>
+
+
+             <!-- Change Password Modal -->
+            <div class="modal fade" id="staticBackdrop3" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel3" aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="staticBackdropLabel">Change Password</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+                    <form class="form" action="change-password.php" method="post" enctype="multipart/form-data">
+
+                      <div class="mb-1">
+                        <label for="exampleAccessCode" class="form-label">Old Password</label> <span style="color:#ff0000">*</span>
+                        <input disabled type="password" value="<?php echo $row['mobile_number']; ?>" class="form-control" id="access_code" name="access_code" aria-describedby="emailHelp" placeholder="Old Password">
+                      </div>
+
+                      <input type="hidden" value="<?php echo $row['user_id']; ?>" class="form-control" id="user_id" name="user_id" aria-describedby="emailHelp">
+
+                      <div class="mb-1">
+                        <label for="exampleAccessCode" class="form-label">New Password</label> <span style="color:#ff0000">*</span>
+                        <input type="password" value="" class="form-control" id="new_access_code" name="new_access_code" aria-describedby="emailHelp" placeholder="New Password">
+                      </div>
+
+                      <button type="submit" class="btn btn-success" name="button" data-bs-toggle="modal" data-bs-target="#staticBackdrop3">Change Password</button>
+
+                    </form>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
 
            </div>
            <!-- End of container md -->
@@ -277,6 +340,27 @@
         }
       }
     </script>
+
+
+    <script type="text/javascript">
+      $(document).ready(function(){
+        $('.editbtn').click(function(){
+
+          var errorList="";
+          var product_id = $(this).data('id');
+          $.ajax({
+            url: 'ajaxfile.php',
+            type: 'post',
+            data: {product_id: product_id},
+            success: function(response){
+              $('.modal-body').html(response);
+              $('#proModal').modal('show');
+            }
+          });
+        });
+      });
+    </script>
+
 
   </body>
 </html>

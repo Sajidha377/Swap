@@ -94,7 +94,7 @@
 
                   ?>
                       <div class="carousel-item active">
-                        <img src="images/large/<?php echo $row['picture']; ?>" class="img-responsive center-block" alt="...">
+                        <img src="images/large/<?php echo $row['picture']; ?>" alt="...">
                         <div class="carousel-caption d-none d-md-block">
                           <h5><?php echo $row['product_name']; ?></h5>
                           <p> <strong>For Trade by -</strong> <?php echo $row['user_first_name']; ?> <?php echo $row['user_last_name']; ?> </p>

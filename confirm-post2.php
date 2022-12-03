@@ -24,12 +24,12 @@ require("code_lib.inc.php");
   if($x>0){
 
       // echo "record successfully updated";
-    $_SESSION['status'] = "Record confirmed!!";
+    $_SESSION['status'] = "Post confirmed!!";
     header("location:confirm-post.php?status=pass");
   }
   else{
     // echo "updating record failed";
-    $_SESSION['status'] = "Confirming record failed!!";
+    $_SESSION['status'] = "Confirming Post failed!!";
     header("location:confirm-post.php?status=pass");
   }
 

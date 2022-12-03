@@ -10,15 +10,12 @@
   $user_id = $_REQUEST['user_id'];
   $access_code = $_REQUEST['access_code'];
   $mobile_number = $_REQUEST['mobile_number'];
-
-  $encrypted_pwd = crypt($access_code, 'x091');
-
+  
   //lets build the dynamic sql commands
   $sql = "update user set ";
   $sql .= "user_first_name='$user_first_name',";
   $sql .= "user_last_name='$user_last_name',";
   $sql .= "user_id='$user_id',";
-  $sql .= "access_code='$encrypted_pwd',";
   $sql .= "mobile_number='$mobile_number' where user_id='$user_id'";
 
   //execute the sql command

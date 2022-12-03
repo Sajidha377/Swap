@@ -74,8 +74,8 @@
                   <div class="col-md-6">
                     <label for="productCondition" class="form-label">Condition</label>
                     <select class="form-select" name="product_condition" required>
-                      <option selected value="new">New</option>
-                      <option value="used">Used</option>
+                      <option selected value="New">New</option>
+                      <option value="Used">Used</option>
                     </select>
                   </div>
                   <!-- End of col-md-6 -->
@@ -89,7 +89,7 @@
 
 
                   <div class="col-md-6"  style="display:flex; display:inline-block;">
-                    <label for="productName" class="form-label">Add Images</label>
+                    <label for="productName" class="form-label">Add Image</label>
                     <input type="file" class="form-control" name="picture" id="picture" value="" required onchange="previewImage(this.files[0])">
                   </div>
                   <!-- End of col-md-6 -->
@@ -104,17 +104,17 @@
                   <div class="col-md-6">
                     <label for="category" class="form-label">Category</label>
                     <select class="form-select" name="category" required>
-                      <option selected value="electronic">Electronics</option>
-                      <option value="book">Books</option>
-                      <option value="furniture">Furnitures</option>
+                      <option selected value="Electronics">Electronics</option>
+                      <option value="Books">Books</option>
+                      <option value="Furnitures">Furnitures</option>
                     </select>
                   </div>
                   <!-- End of col-md-6 -->
 
                   <div class="col-md-6">
                     <select class="form-select" name="confirmation" style="visibility:hidden;">
-                      <option selected value="no">No</option>
-                      <option value="yes">yes</option>
+                      <option selected value="No">No</option>
+                      <option value="Yes">Yes</option>
                     </select>
                   </div>
                   <!-- End of col-md-6 -->
