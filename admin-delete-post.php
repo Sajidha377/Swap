@@ -21,6 +21,8 @@ require("code_lib.inc.php");
     // echo "Deleted Successfully!!";
     $_SESSION['status'] = "Product deleted successfully!!";
     header("location:confirm-post.php?status=pass");
+
+    
   }
   else{
     // echo "Failed!!";

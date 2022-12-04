@@ -23,7 +23,7 @@
 
     <div class="row">
     <div class="col-8">
-      <?php 
+      <?php
         if(isset($_SESSION['status'])){
           echo '<div class="alert alert-danger alert-dismissible fade show" role="alert" style="margin-top:20px;">'
           .$_SESSION['status'].'<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button></div>';

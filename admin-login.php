@@ -43,21 +43,20 @@
               <div class="col-2 admin-login">
                 <h5>Admin Login</h5>
                 <p>Welcome back! Please enter your details.</p>
-                <form action="login2.php" method="post">
+                <form action="admin-login2.php" method="post">
                   <div class="mb-1">
                     <label for="exampleInputEmail1" class="form-label">Email</label>
-                    <input type="email" class="form-control" id="user_id" name="user_id" aria-describedby="emailHelp" placeholder="Use your email address">
+                    <input type="email" class="form-control" id="admin_id" name="admin_id" aria-describedby="emailHelp" placeholder="Use your email address">
                   </div>
                   <div class="mb-1">
                     <label for="exampleInputPassword1" class="form-label">Password</label>
-                    <input type="password" class="form-control" id="access_code" name="access_code" placeholder="Enter your password">
+                    <input type="password" class="form-control" id="admin_access_code" name="admin_access_code" placeholder="Enter your password">
                     <span class="eye" onclick="myFunction()">
                       <i id="hide1" class="fas fa-solid fa-eye"></i>
                       <i id="hide2" class="fas fa-solid fa-eye-slash"></i>
                     </span>
                   </div>
                   <button type="submit" class="btn btn-primary">Login</button>
-                  <span>Don't have an account? <a href="sign-up.php">Sign Up</a> </span>
                 </form>
               </div>
             </div>

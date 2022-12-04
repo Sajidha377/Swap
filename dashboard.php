@@ -1,3 +1,10 @@
+<?php
+//connect to database server
+require("db_connection.php");
+
+require("validate-admin.php");
+ ?>
+
 <!DOCTYPE html>
 <html>
   <head>
@@ -13,110 +20,213 @@
       ?>
     </style>
 
-    <title>Confirm Post | Swap</title>
+    <title>Dashboard | Swap</title>
   </head>
   <body>
 
     <!-- Main Container -->
     <div class="container">
 
-      <div class="row 1">
-        <nav class="navbar bg-light">
-          <div class="container-fluid">
-            <a class="navbar-brand" href="#"><img src="images/logo.png" alt="Logo"></a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
-              <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
-              <div class="offcanvas-header">
-                <img src="images/logo.png" alt="Logo">
-                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-              </div>
-              <div class="offcanvas-body">
-                <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-                  <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#"> <i class="fas fa-tachometer-alt"></i> Dashboard</a>
-                  </li>
-                  <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    <i class="fas fa-solid fa-plus"></i>Post
-                    </a>
-                    <ul class="dropdown-menu">
-                      <li><a class="dropdown-item" href="#">Add Post</a></li>
-                      <li><a class="dropdown-item" href="#">Update Post</a></li>
-                    </ul>
-                  </li>
-                  <!--  -->
-                  <li class="nav-item">
-                    <a class="nav-link" href="#"> <i class="fas fa-solid fa-users"></i>Customers</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#"><i class="fas fa-solid fa-user-plus"></i>Sign Up</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#"><i class="fas fa-sign-out-alt"></i></i>Log Out</a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </nav>
-      </div>  
-      <!-- End of row1 -->
+      <!-- Header -->
+      <?php
+       include("dashboard-header.php");
+      ?>
 
       <div class="small-container">
-        <div class="row 2">
+        <div class="col-10 confirm">
+          <h2>Dashboard</h2>
+        </div>
+      </div>
 
-          <div class="card" style="width: 18rem;">
-            <div class="card-body">
-              <h5 class="card-title">25</h5>
-              <h6 class="card-subtitle mb-2 text-muted">Electronics</h6>
-              <i class=" fas fa-solid fa-laptop"></i>
-            </div>
-          </div>
+      <div class="small-container">
 
-          <div class="card" style="width: 18rem;">
-            <div class="card-body">
-              <h5 class="card-title">30</h5>
-              <h6 class="card-subtitle mb-2 text-muted">Books</h6>
-              <i class="fas fa-solid fa-book"></i>
-            </div>
-          </div>
+        <div class="row 1">
 
-          <div class="card" style="width: 18rem;">
-            <div class="card-body">
-              <h5 class="card-title">30</h5>
-              <h6 class="card-subtitle mb-2 text-muted">Books</h6>
-              <i class="fas fa-solid fa-book"></i>
-            </div>
-          </div>
+          <!-- Carousel -->
+          <?php
+           include("dashboard-carousel.php");
+          ?>
 
-          <div class="card" style="width: 18rem;">
-            <div class="card-body">
-              <h5 class="card-title">50</h5>
-              <h6 class="card-subtitle mb-2 text-muted">Registered Customers</h6>
-              <i class="fas fa-solid fa-users"></i>
-            </div>
-          </div>
+          <div class="col-lg-8 col-md-8 dashboard" style="display:flex; flex-basis:60%; flex-wrap:wrap;">
 
-          <div class="card" style="width: 18rem;">
-            <div class="card-body">
-              <h5 class="card-title">85</h5>
-              <h6 class="card-subtitle mb-2 text-muted">Total Number of Posts</h6>
-              <i class="fas fa-solid fa-list"></i>
-            </div>
-          </div>
+            <div class="row 2">
 
-          <div class="card" style="width: 18rem; visibility:hidden;">
-            <div class="card-body">
-              <h5 class="card-title">85</h5>
-              <h6 class="card-subtitle mb-2 text-muted">Total Number of Posts</h6>
-              <i class="fas fa-solid fa-files"></i>
+            <?php
+
+              $keyword = 'electronics';
+
+              $result = $mysqli->query("SELECT * FROM product WHERE category LIKE '%$keyword%'");
+
+              $rowcount1 = mysqli_num_rows($result);
+
+             ?>
+
+              <div class="card" style="width: 13rem;">
+                <div class="card-body">
+                  <h5 class="card-title"><?php echo $rowcount1; ?></h5>
+                  <h6 class="card-subtitle mb-2 text-muted">Electronics</h6>
+                  <i class=" fas fa-solid fa-laptop"></i>
+                </div>
+              </div>
+              <!-- Electronics -->
+
+              <?php
+
+                $keyword = 'books';
+
+                $result = $mysqli->query("SELECT * FROM product WHERE category LIKE '%$keyword%'");
+
+                $rowcount2 = mysqli_num_rows($result);
+
+               ?>
+
+              <div class="card" style="width: 13rem;">
+                <div class="card-body">
+                  <h5 class="card-title"><?php echo $rowcount2; ?></h5>
+                  <h6 class="card-subtitle mb-2 text-muted">Books</h6>
+                  <i class="fas fa-solid fa-book"></i>
+                </div>
+              </div>
+              <!-- Books -->
+
+              <?php
+
+                $keyword = 'furnitures';
+
+                $result = $mysqli->query("SELECT * FROM product WHERE category LIKE '%$keyword%'");
+
+                $rowcount3 = mysqli_num_rows($result);
+
+               ?>
+
+              <div class="card" style="width: 13rem;">
+                <div class="card-body">
+                  <h5 class="card-title"><?php echo $rowcount3; ?></h5>
+                  <h6 class="card-subtitle mb-2 text-muted">Furnitures</h6>
+                  <i class="fas fa-solid fa-couch"></i>
+                </div>
+              </div>
+
             </div>
+            <!-- End of row 2 -->
+
+            <div class="row 3">
+
+              <?php
+
+                $result = $mysqli->query("SELECT * FROM user");
+
+                $rowcount4 = mysqli_num_rows($result);
+
+               ?>
+
+              <div class="card" style="width: 13rem;">
+                <div class="card-body">
+                  <h5 class="card-title"><?php echo $rowcount4; ?></h5>
+                  <h6 class="card-subtitle mb-2 text-muted">Registered Customers</h6>
+                  <i class="fas fa-solid fa-users"></i>
+                </div>
+              </div>
+              <!-- Registered customers -->
+
+              <?php
+
+                $result = $mysqli->query("SELECT * FROM product");
+
+                $rowcount5 = mysqli_num_rows($result);
+
+               ?>
+
+              <div class="card" style="width: 13rem;">
+                <div class="card-body">
+                  <h5 class="card-title"><?php echo $rowcount5; ?></h5>
+                  <h6 class="card-subtitle mb-2 text-muted">Total Number of Posts</h6>
+                  <i class="fas fa-solid fa-list"></i>
+                </div>
+              </div>
+
+              <div class="card" style="width: 13rem; visibility:hidden;">
+                <div class="card-body">
+                  <h5 class="card-title">85</h5>
+                  <h6 class="card-subtitle mb-2 text-muted">Total Number of Posts</h6>
+                  <i class="fas fa-solid fa-files"></i>
+                </div>
+              </div>
+
+            </div>
+            <!-- End of row 3 -->
+
           </div>
+          <!-- End of col-lg-8 -->
 
         </div>
-        <!-- End of row 2 -->
+        <!-- End of row 1 -->
+
+      </div>
+      <!-- End of small-container -->
+
+
+
+      <div class="small-container">
+          <div class="row 4">
+            <?php
+
+               $keyword = 'yes';
+               $limit = 5;
+
+              //building the dynamic SQL command
+              $sql = "SELECT * FROM user INNER JOIN product ON user.user_id = product.user_id WHERE confirmation LIKE '%$keyword%' AND $limit";
+
+              //executing the SQL command
+              $rs = $mysqli->query($sql);
+
+              while($row = mysqli_fetch_assoc($rs)){
+
+            ?>
+
+            <div class="alert alert-secondary alert-dismissible fade show" role="alert">
+              <div class="row">
+                <div class="col-5 category">
+                  <img src="images/large/<?php echo $row['picture']; ?>" alt="">
+                </div>
+
+                <div class="col-7 dashboard">
+                  <table>
+                    <tbody>
+                      <tr>
+                        <td> <h5><?php echo $row['product_name']; ?></h5> </td>
+                      </tr>
+                      <tr>
+                        <th>Condition</th>
+                        <th>-</th>
+                        <td><?php echo $row['product_condition']; ?></td>
+                      </tr>
+                      <tr>
+                        <th>Category</th>
+                        <th>-</th>
+                        <td><?php echo $row['category']; ?></td>
+                      </tr>
+                      <tr style="text-align:left;">
+                        <th>For trade by</th>
+                        <th>-</th>
+                        <td><?php echo $row['user_first_name']; ?> <?php echo $row['user_last_name']; ?></td>
+                      </tr>
+                      <tr>
+                        <td style="visibility:hidden;"><?php echo $row['user_id']; ?></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+
+            <?php
+
+             }
+
+            ?>
+          </div>
+          <!-- End of row 4 -->
       </div>
       <!-- End of small-container -->
 

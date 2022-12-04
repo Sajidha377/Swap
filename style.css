@@ -1118,6 +1118,97 @@
 }
 
 
+/* Carousel */
+.carousel-inner.dashboard img{
+  height:600px;
+}
+
+.col-lg-5.col-md-5{
+  margin-left: 0px;
+}
+
+/*Dashboard*/
+.col-lg-6.col-md-6 h5{
+  color: #02444b;
+  font-weight: bold;
+}
+
+.col-lg-6.col-md-6 p{
+  font-size: 11px;
+  color: #02444b;
+}
+
+.col-lg-6.col-md-6 form{
+  color:#02444b;
+  font-size:14px;
+  font-weight:600;
+}
+
+.col-lg-6.col-md-6 form .eye{
+position:relative;
+float:right;
+margin-left: -25px;
+margin-top: -27px;
+margin-right:10px;
+}
+
+.col-lg-6.col-md-6 form button{
+  background-color:#02444b;
+  border:none;
+  border-radius:30px;
+  font-size:13px;
+  font-weight:bold;
+  display:block;
+  width:100%;
+  color:#fff;
+}
+
+.col-lg-8.col-md-8.dashboard .row{
+  padding:10px;
+}
+
+.col-lg-8.col-md-8.dashboard .card{
+  margin-right:10px;
+}
+
+.col-7.dashboard table{
+  width:100%;
+  text-align:left;
+  padding:0px;
+  color:#02444b;
+}
+
+.col-5.dashboard table tr,th,td{
+  padding:5px;
+}
+
+.col-5.dashboard tr{
+  line-height:10px;
+}
+
+.col-5.dashboard h5{
+  font-weight:bold;
+}
+
+
+/* Admin sign up */
+.col-lg-8.col-md-8.admin form{
+    text-align:left;
+}
+
+.col-lg-8.col-md-8.admin form input{
+  font-size: 14px;
+}
+
+.col-lg-8.col-md-8.admin form button{
+  margin-top:15px;
+}
+
+/*Admin dashboard header*/
+.row.1.admin .offcanvas-body .nav-item{
+  color:#02444b;
+}
+
 /*Footer*/
 .footer{
   padding-top:50px;

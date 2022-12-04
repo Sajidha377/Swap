@@ -20,14 +20,14 @@ $sql .= "access_code='$encrypted_pwd' where user_id='$user_id'";
 $x = $mysqli->query($sql);
 
 if($x > 0){
-  echo "Update Successful";
-  // $_SESSION['status'] = "Updated Account Successfully!!";
-  // header("location:user-account.php?status=pass");
+  // echo "Update Successful";
+  $_SESSION['status'] = "Changed Successfully!!";
+  header("location:user-account.php?status=pass");
 }
 else{
-  echo "Update failed";
-  // $_SESSION['status'] = "Updating Account Failed!!";
-  // header("location:user-account.php?status=fail");
+  // echo "Update failed";
+  $_SESSION['status'] = "Changing Password Failed!!";
+  header("location:user-account.php?status=fail");
 }
 
 

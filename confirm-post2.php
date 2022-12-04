@@ -1,4 +1,5 @@
 <?php
+require("validate-admin.php");
 
 //start the session
 session_start();
