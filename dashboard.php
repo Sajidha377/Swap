@@ -165,17 +165,24 @@ require("validate-admin.php");
       </div>
       <!-- End of small-container -->
 
+      <div class="small-container">
+        <div class="row">
+          <div class="col-10 confirm">
+            <h2>Recent Posts</h2>
+          </div>
+        </div>
+      </div>
 
 
       <div class="small-container">
+
           <div class="row 4">
             <?php
 
                $keyword = 'yes';
-               $limit = 5;
 
               //building the dynamic SQL command
-              $sql = "SELECT * FROM user INNER JOIN product ON user.user_id = product.user_id WHERE confirmation LIKE '%$keyword%' AND $limit";
+              $sql = "SELECT * FROM user INNER JOIN product ON user.user_id = product.user_id WHERE confirmation LIKE '%$keyword%'  ORDER BY product_id DESC LIMIT 5";
 
               //executing the SQL command
               $rs = $mysqli->query($sql);
@@ -193,6 +200,9 @@ require("validate-admin.php");
                 <div class="col-7 dashboard">
                   <table>
                     <tbody>
+                      <tr>
+                        <td> <h5><?php echo $row['product_id']; ?></h5> </td>
+                      </tr>
                       <tr>
                         <td> <h5><?php echo $row['product_name']; ?></h5> </td>
                       </tr>

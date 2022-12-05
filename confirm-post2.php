@@ -1,14 +1,13 @@
 <?php
 require("validate-admin.php");
 
-//start the session
-session_start();
-
 //connect the database server
 require("db_connection.php");
 
 // connecting the code library
-require("code_lib.inc.php");
+require("code_lib.inc.php");$admin_id = $_SESSION['admin_id'];
+
+  $admin_id = $_SESSION['admin_id'];
 
   $product_id = $_REQUEST['product_id'];
   $confirmation = $_REQUEST['confirmation'];
@@ -17,10 +16,17 @@ require("code_lib.inc.php");
   $sql  = "update product set ";
   $sql .= "confirmation='$confirmation' where product_id='$product_id'";
 
+  $sql1 = "insert into product_admin (product_id,admin_id) values(";
+  $sql1 .= "'$product_id',";
+  $sql1 .= "'$admin_id')";
+
   // echo $sql;
 
   //execute the sql command
   $x = $mysqli->multi_query($sql);
+
+  //execute the sql command
+  $y = $mysqli->multi_query($sql1);
 
   if($x>0){
 

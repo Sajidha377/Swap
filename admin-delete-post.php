@@ -11,10 +11,11 @@ require("code_lib.inc.php");
 
   $id = $_GET['a'];
 
+  //building a dynamic SQL command
   $sql = "delete from product where product_id='$id'";
 
   //execute the sql command
-  $x = $mysqli->multi_query($sql);
+  $x = $mysqli->query($sql);
 
   if($x > 0){
 
@@ -22,7 +23,7 @@ require("code_lib.inc.php");
     $_SESSION['status'] = "Product deleted successfully!!";
     header("location:confirm-post.php?status=pass");
 
-    
+
   }
   else{
     // echo "Failed!!";

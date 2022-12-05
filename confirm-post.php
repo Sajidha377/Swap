@@ -116,7 +116,7 @@
                               <th>Confirm</th>
                               <th>-</th>
                               <td> <select class="form-select" name="confirmation">
-                                <option value="<?php echo $row['confirmation']; ?>"><?php echo $row['confirmation']; ?></option>
+                                <option disabled value="<?php echo $row['confirmation']; ?>"><?php echo $row['confirmation']; ?></option>
                                 <option value="Yes">Yes</option>
                               </select></td>
                             </tr>
@@ -130,7 +130,6 @@
 
                   <button type="submit" class="btn btn-success" data-bs-dismiss="alert" aria-label="Close">Save</button></a>
                   <a href="admin-delete-post.php?a=<?php echo $row['product_id']; ?>"><button type="button" class="btn btn-danger" data-bs-dismiss="alert" aria-label="Close">Delete</button></a>
-
                   </form>
 
                 </div>
@@ -142,6 +141,31 @@
                }
 
               ?>
+
+              <?php
+                $admin_id = $_SESSION['admin_id'];
+
+                //building the dynamic SQL command
+                $sql = "select * from admin where admin_id='$admin_id'";
+
+                //executing the SQL command
+                $rs = $mysqli->query($sql);
+
+
+                if(mysqli_num_rows($rs) > 0){
+
+                  //fetching the records
+                  $row = mysqli_fetch_assoc($rs);
+                ?>
+
+                <input type="hidden" name="" value="<?php echo $row['admin_id']; ?>">
+
+                <?php
+
+                 }
+
+                ?>
+
 
             </div>
             <!-- End of col-lg-8 -->
