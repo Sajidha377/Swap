@@ -49,7 +49,7 @@
               <a class="nav-link" href="confirm-post.php"> <i class="fas fa-solid fa-users" style="margin-right:15px;"></i>Confirm Post</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#"> <i class="fas fa-solid fa-users" style="margin-right:15px;"></i>Customers</a>
+              <a class="nav-link" href="customers.php"> <i class="fas fa-solid fa-users" style="margin-right:15px;"></i>Customers</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="admin-sign-up.php"><i class="fas fa-solid fa-user-plus" style="margin-right:15px;"></i>Sign Up</a>

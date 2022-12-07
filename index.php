@@ -1,5 +1,8 @@
 <?php
   session_start();
+
+  //connect to database server
+  require("db_connection.php");
 ?>
 <!DOCTYPE html>
 <html>
@@ -32,7 +35,7 @@
         else{
           include("header.php");
         }
-        
+
        ?>
 
 <!-- Banner -->
@@ -87,7 +90,18 @@
                 <img src="images/electronics.png" alt="">
               </div>
               <div class="col-8 index">
-                <p>148 ads</p>
+                <!-- Electronics -->
+                <?php
+
+                  $keyword = 'electronics';
+                  $keyword1 = 'Yes';
+
+                  $result = $mysqli->query("SELECT * FROM product WHERE category LIKE '%$keyword%' AND confirmation LIKE '%$keyword1%'");
+
+                  $rowcount1 = mysqli_num_rows($result);
+
+                 ?>
+                <p><?php echo $rowcount1; ?> posts</p>
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. <br>
                 <a href="electronics.php">View More  &rarr;</a>
               </div>
@@ -99,7 +113,18 @@
                 <img src="images/books.png" alt="">
               </div>
               <div class="col-8 index">
-                <p>148 ads</p>
+                <!-- Books -->
+                <?php
+
+                  $keyword = 'books';
+                  $keyword1 = 'Yes';
+
+                  $result = $mysqli->query("SELECT * FROM product WHERE category LIKE '%$keyword%' AND confirmation LIKE '%$keyword1%'");
+
+                  $rowcount2 = mysqli_num_rows($result);
+
+                 ?>
+                <p><?php echo $rowcount2; ?> Posts</p>
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. <br>
                 <a href="books.php">View More  &rarr;</a>
               </div>
@@ -111,7 +136,18 @@
                 <img src="images/furnitures.png" alt="">
               </div>
               <div class="col-8 index">
-                <p>148 ads</p>
+                <!-- Furnitures -->
+                <?php
+
+                  $keyword = 'furnitures';
+                  $keyword1 = 'Yes';
+
+                  $result = $mysqli->query("SELECT * FROM product WHERE category LIKE '%$keyword%' AND confirmation LIKE '%$keyword1%'");
+
+                  $rowcount3 = mysqli_num_rows($result);
+
+                 ?>
+                <p><?php echo $rowcount3; ?> posts</p>
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. <br>
                 <a href="furnitures.php">View More  &rarr;</a>
               </div>
@@ -144,7 +180,7 @@
   else{
     include("footer.php");
   }
-  
+
   ?>
 
 

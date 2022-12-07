@@ -131,6 +131,7 @@
         <!-- End of col-10 -->
      </div>
 
+     <!-- Electronics -->
      <div class="row">
        <div class="col-10 category">
 
@@ -158,7 +159,7 @@
            $rs = $mysqli->query($sql);
 
            while($row = mysqli_fetch_assoc($rs)){
-
+             $timestamp = $row['createdAt'];
          ?>
 
         <div class="col-10 category1">
@@ -182,6 +183,11 @@
                   <td><?php echo $row['user_first_name']; ?> <?php echo $row['user_last_name']; ?></td>
                 </tr>
                 <tr>
+                  <th>Posted on</th>
+                  <th>-</th>
+                  <td><?php echo date('Y-m-d', strtotime($timestamp)); ?></td>
+                </tr>
+                <tr>
                   <td style="visibility:hidden;"><?php echo $row['user_id']; ?></td>
                 </tr>
                 <tr>
@@ -200,8 +206,9 @@
         ?>
        </div>
      </div>
-     <!--  -->
+     <!-- End of Electronics -->
 
+     <!-- Pagination -->
      <div class="row">
        <div class="col-10 category">
          <nav aria-label="Page navigation example">
@@ -220,6 +227,9 @@
          </nav>
        </div>
      </div>
+     <!-- End of row -->
+     <!-- End of Pagination -->
+
     </div>
     <!-- End of container md -->
 

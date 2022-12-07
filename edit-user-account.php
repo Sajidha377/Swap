@@ -10,7 +10,7 @@
   $user_id = $_REQUEST['user_id'];
   $access_code = $_REQUEST['access_code'];
   $mobile_number = $_REQUEST['mobile_number'];
-  
+
   //lets build the dynamic sql commands
   $sql = "update user set ";
   $sql .= "user_first_name='$user_first_name',";

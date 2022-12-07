@@ -2,6 +2,8 @@
 @media only screen and (max-width:320px){
   .row{
     text-align:center;
+    justify-content:center;
+    display:flex;
   }
 
   .col-2, .col-3, .col-5, .col-4, .col-6{
@@ -24,6 +26,8 @@
 @media only screen and (max-width:480px){
   .row{
     text-align:center;
+    justify-content:center;
+    display:flex;
   }
 
   .col-2, .col-3, .col-5, .col-4, .col-6{
@@ -42,6 +46,7 @@
 @media only screen and (max-width:600px){
   .row{
     text-align:center;
+
   }
 
   .col-2, .col-3, .col-5, .col-4, .col-6{
@@ -371,7 +376,6 @@
 }
 
 .col-5.category:nth-child(2){
-  font-size:13px;
   padding-left:10px;
   padding-top:10px;
 }
@@ -385,6 +389,15 @@
 
 .col-5.category table tr,th,td{
   padding:5px;
+  text-align:left;
+}
+
+.col-5.category table th{
+  font-size:13px;
+}
+
+.col-5.category table td{
+  font-size:12px;
 }
 
 .col-5.category tr{
@@ -857,24 +870,6 @@
   font-weight:bold;
 }
 
-.col-10.account .modal-title{
-  font-weight:bold;
-}
-
-.col-10.account .modal-body tr th,td{
-  font-size:13px;
-}
-
-.col-10.account .modal-body form label{
-  font-size:14px;
-  font-weight:600;
-  color:#02444b;
-}
-
-.col-10.account .modal-body form .form-control{
-  font-size:14px;
-}
-
 .col-10.account .modal .mb-1 .eye{
   position:relative;
   float:right;
@@ -887,14 +882,16 @@
   display:none;
 }
 
-.col-8.account img{
-  width:175px;
-  height:175px;
+.col-8.account .col-md-4 img{
+  width:120%;
+  height:auto;
+  /* width:220px;
+  height:auto; */
   padding-right:50px;
 }
 
 .col-8.account table th{
-  font-size:12px;
+  font-size:13px;
   vertical-align:top;
   text-align: justify;
   padding-left:5px;
@@ -1012,7 +1009,6 @@
 
 .col-10.product2 table{
   color:#02444b;
-  font-size:14px;
   margin-left:2%;
 }
 
@@ -1117,8 +1113,12 @@
   color:#02444b;
 }
 
-.col-8.confirm table th,td{
-  font-size:14px;
+.col-8.confirm table th{
+  font-size:13px;
+}
+
+.col-8.confirm table td{
+  font-size:12px;
 }
 
 .col-8.confirm table th{
@@ -1215,6 +1215,34 @@ margin-right:10px;
 /*Admin dashboard header*/
 .row.1.admin .offcanvas-body .nav-item{
   color:#02444b;
+}
+
+/* customer */
+.col-12.customer .alert{
+  background-color:#f4f4f4;
+  color:#02444b;
+}
+
+.col-10.customer h2{
+  font-weight:bold;
+  color:#02444b;
+}
+
+.col-10.customer{
+  /* background-color:#f4f4f4; */
+  display:flex;
+  justify-content:center;
+  flex-wrap:wrap;
+  align-items:center;
+  padding-top:10px;
+  color:#02444b;
+}
+
+.col-10.customer nav ul li a{
+  text-decoration:none;
+  color:#02444b;
+  font-size:13px;
+  border:0px;
 }
 
 /*Footer*/

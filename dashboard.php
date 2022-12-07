@@ -51,11 +51,13 @@ require("validate-admin.php");
 
             <div class="row 2">
 
+            <!-- Electronics -->
             <?php
 
               $keyword = 'electronics';
+              $keyword1 = 'Yes';
 
-              $result = $mysqli->query("SELECT * FROM product WHERE category LIKE '%$keyword%'");
+              $result = $mysqli->query("SELECT * FROM product WHERE category LIKE '%$keyword%' AND confirmation LIKE '%$keyword1%'");
 
               $rowcount1 = mysqli_num_rows($result);
 
@@ -70,11 +72,13 @@ require("validate-admin.php");
               </div>
               <!-- Electronics -->
 
+              <!-- Books -->
               <?php
 
                 $keyword = 'books';
+                $keyword1 = 'Yes';
 
-                $result = $mysqli->query("SELECT * FROM product WHERE category LIKE '%$keyword%'");
+                $result = $mysqli->query("SELECT * FROM product WHERE category LIKE '%$keyword%' AND confirmation LIKE '%$keyword1%'");
 
                 $rowcount2 = mysqli_num_rows($result);
 
@@ -89,11 +93,13 @@ require("validate-admin.php");
               </div>
               <!-- Books -->
 
+              <!-- Furnitures -->
               <?php
 
                 $keyword = 'furnitures';
+                $keyword1 = 'Yes';
 
-                $result = $mysqli->query("SELECT * FROM product WHERE category LIKE '%$keyword%'");
+                $result = $mysqli->query("SELECT * FROM product WHERE category LIKE '%$keyword%' AND confirmation LIKE '%$keyword1%'");
 
                 $rowcount3 = mysqli_num_rows($result);
 
@@ -106,12 +112,14 @@ require("validate-admin.php");
                   <i class="fas fa-solid fa-couch"></i>
                 </div>
               </div>
+              <!-- Furnitures -->
 
             </div>
             <!-- End of row 2 -->
 
             <div class="row 3">
 
+              <!-- Registered customers -->
               <?php
 
                 $result = $mysqli->query("SELECT * FROM user");
@@ -129,29 +137,44 @@ require("validate-admin.php");
               </div>
               <!-- Registered customers -->
 
+              <!-- Total confirmed posts -->
               <?php
 
-                $result = $mysqli->query("SELECT * FROM product");
+              $keyword = 'Yes';
 
-                $rowcount5 = mysqli_num_rows($result);
+              $result = $mysqli->query("SELECT * FROM product WHERE confirmation LIKE '%$keyword%'");
+
+              $rowcount5 = mysqli_num_rows($result);
 
                ?>
 
               <div class="card" style="width: 13rem;">
                 <div class="card-body">
                   <h5 class="card-title"><?php echo $rowcount5; ?></h5>
-                  <h6 class="card-subtitle mb-2 text-muted">Total Number of Posts</h6>
+                  <h6 class="card-subtitle mb-2 text-muted">Confirmed No. of Posts</h6>
                   <i class="fas fa-solid fa-list"></i>
                 </div>
               </div>
+              <!-- Total confirmed posts -->
 
-              <div class="card" style="width: 13rem; visibility:hidden;">
+              <!-- Total unconfirmed posts -->
+              <?php
+
+                $keyword = 'No';
+
+                $result = $mysqli->query("SELECT * FROM product WHERE confirmation LIKE '%$keyword%'");
+
+                $rowcount6 = mysqli_num_rows($result);
+
+               ?>
+              <div class="card" style="width: 13rem;">
                 <div class="card-body">
-                  <h5 class="card-title">85</h5>
-                  <h6 class="card-subtitle mb-2 text-muted">Total Number of Posts</h6>
-                  <i class="fas fa-solid fa-files"></i>
+                  <h5 class="card-title"><?php echo $rowcount6; ?></h5>
+                  <h6 class="card-subtitle mb-2 text-muted">Unconfirmed Posts</h6>
+                  <i class="fas fa-solid fa-list"></i>
                 </div>
               </div>
+              <!-- Total unconfirmed posts -->
 
             </div>
             <!-- End of row 3 -->

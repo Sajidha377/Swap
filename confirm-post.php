@@ -53,7 +53,7 @@
             ?>
           </div>
 
-          <div class="row">
+          <div class="row" style="align-items:stretch; justify-content:flex-start;">
 
             <!-- Carousel -->
             <?php

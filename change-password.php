@@ -7,7 +7,7 @@ session_start();
 require("db_connection.php");
 
 //copying the form field values into variables
-$user_id = $_REQUEST['user_id'];
+$user_id = $_SESSION['user_id'];
 $new_access_code = $_REQUEST['new_access_code'];
 
 $encrypted_pwd = crypt($new_access_code, 'x091');
