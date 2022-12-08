@@ -1360,9 +1360,13 @@ margin-right:10px;
   text-align: center;
 }
 
-.col-12.about h1{
+.col-12.about h1, h4{
   color:#02444b;
   font-weight:600;
+}
+
+.col-12.about h4{
+  padding-bottom:15px;
 }
 
 .col-12.about p{
@@ -1382,11 +1386,14 @@ margin-right:10px;
   height:80px;
 }
 
-.col-12.about .card .card-title{
-  font-weight:600;
+.col-12.about .card-title{
   color:#02444b;
+  font-weight:600;
 }
 
+.col-12.about .row.4 .col-lg-6.col-md-6 li{
+  font-size:13px;
+}
 
 /*Footer*/
 .footer{
