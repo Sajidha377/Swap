@@ -1245,6 +1245,149 @@ margin-right:10px;
   border:0px;
 }
 
+/* Contact us */
+.container.contact{
+  width:100%;
+  min-height:80vh;
+  background:linear-gradient(-135deg, transparent, #f4f4f4);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:5%;
+  position:relative;
+}
+
+.col-1.contact, .col-2.contact{
+  flex-basis:50%;
+  flex-grow:1;
+}
+
+.col-1.contact img{
+  display:absolute;
+  width:100%;
+  height:auto;
+  display:block;
+  border-radius:10px 0px 0px 10px;
+}
+
+.col-2.contact{
+  background-color:#f4f4f4;
+  padding:40px 8%;
+  min-width:250px;
+  border-radius:0px 10px 10px 0px;
+  padding-top:11.5%;
+  padding-bottom:11.5%;
+}
+
+.col-2.contact h5{
+  color:#02444b;
+  font-weight:bold;
+}
+
+.col-2.contact p{
+  font-size:11px;
+  color:#02444b;
+}
+
+.col-2.contact p a{
+  text-decoration:none;
+}
+
+.col-2.contact label{
+  font-size:14px;
+  color:#02444b;
+  font-weight:600;
+}
+
+.col-2.contact .form-control{
+  font-size:14px;
+}
+
+.col-2.contact span{
+  font-size:11px;
+  color:#02444b;
+}
+
+.col-2.contact span a{
+  text-decoration:none;
+}
+
+.col-2.contact .mb-1{
+  align-items:flex-start;
+  text-align:left;
+}
+
+.col-2.contact .mb-1.form-check label{
+  font-size:11px;
+  color:#02444b;
+}
+
+.col-2.contact .mb-1.form-check label a{
+  text-decoration:none;
+}
+
+.col-2.contact .mb-1 .form-control{
+  height:30px;
+}
+
+.col-2.contact button{
+  background-color:#02444b;
+  border:none;
+  border-radius:30px;
+  font-size:13px;
+  font-weight:bold;
+  display:block;
+  width:100%;
+  margin-top:20px;
+  color:#fff;
+}
+
+.col-2.contact .eye{
+  position:relative;
+  float:right;
+  margin-left: -25px;
+  margin-top: -23px;
+  margin-right:10px;
+}
+
+#my-form-status{
+  font-size:13px;
+  font-weight:600;
+}
+
+/* About us */
+.col-12.about{
+  text-align: center;
+}
+
+.col-12.about h1{
+  color:#02444b;
+  font-weight:600;
+}
+
+.col-12.about p{
+  color:#02444b;
+  font-size:13px;
+}
+
+.col-12.about .row.2 img{
+  width:100%;
+  height:auto;
+}
+
+.col-12.about .card{
+  margin-top:20px;
+  border:none;
+  text-align:left;
+  height:80px;
+}
+
+.col-12.about .card .card-title{
+  font-weight:600;
+  color:#02444b;
+}
+
+
 /*Footer*/
 .footer{
   padding-top:50px;

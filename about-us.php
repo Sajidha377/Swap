@@ -31,9 +31,94 @@
             else{
               include("header.php");
             }
-            
+
           ?>
 
+
+          <div class="small-container">
+            <div class="row 1">
+              <div class="col-12 about">
+                <h1>We're on a mission to <br> promote eco-friendly future.</h1>
+                <p>Be a part of making a greener future with us. SWAP website intends <br> to promote upcycling of unused products. Swap products you no longer <br> need for ones you need.</p>
+              </div>
+              <!-- End of col-12 -->
+            </div>
+
+          </div>
+          <!-- End of small-container -->
+
+          <div class="small-container">
+            <div class="col-12 about">
+              <div class="row 2" style="align-items:flex-start;">
+                <div class="col-lg-6 col-md-6">
+                  <img src="images/about.jpg" alt="" style="width:100%; height:auto;">
+                </div>
+                <!-- End of col-lg-6 -->
+
+                <div class="col-lg-6 col-md-6">
+                  <div class="row 3">
+                    <img src="images/about2.jpg" alt="" style="width:100%; height:250px;">
+
+                    <div class="card" style="width: 13rem;">
+                      <div class="card-body">
+                        <h3 class="card-title">2022</h3>
+                        <p class="card-subtitle mb-2 text-muted">Founded</p>
+                      </div>
+                    </div>
+
+                    <div class="card" style="width: 13rem;">
+                      <div class="card-body">
+                        <h3 class="card-title">5</h3>
+                        <p class="card-subtitle mb-2 text-muted">Dedicated members</p>
+                      </div>
+                    </div>
+
+                    <div class="card" style="width: 13rem;">
+                      <div class="card-body">
+                        <h3 class="card-title">20+</h3>
+                        <p class="card-subtitle mb-2 text-muted">Loyal customers</p>
+                      </div>
+                    </div>
+
+                    <div class="card" style="width: 13rem;">
+                      <div class="card-body">
+                        <h3 class="card-title">20+</h3>
+                        <p class="card-subtitle mb-2 text-muted">Posts</p>
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
+                <!-- end of col-6 -->
+              </div>
+              <!-- End of row 3 -->
+            </div>
+            <!-- End of col-12 -->
+          </div>
+          <!-- End of small-container -->
+
+          <div class="small-container">
+            <div class="col-12 about">
+              <div class="row 4">
+                <div class="col-lg-6 col-md-6" style="background-color:#f4f4f4; height:500px;">
+                  <h3 style="color:#02444b; font-weight:600; margin-top:10%; text-align:left; margin-left:5%;">Our Mission</h3>
+                  <p style="display:inline-block; text-align:left; margin-left:5%; margin-right:8%;">We are focused on bring up this new swapping concept to Sri Lanka to promote upcycling of products and reduce environmental pollution. Common products like electronics, books and furnitures can be reused as long as it serves the purpose. Therefore, when one has these products unused at home, why not exchange it for something that would be useful to them. <br> We make way for people to get what they want via SWAP without having to spend money. All you have to do is giveaway things you don't use and get things want. Join us and be a part of our mission.</p>
+                </div>
+                <!-- End of col-6 -->
+                <div class="col-lg-6 col-md-6" style="background-color:#02444b; height:500px;">
+                  <h3 style="color:#fff; font-weight:600; margin-top:10%; text-align:left; margin-left:5%;">Our Values</h3>
+
+                  <ul>
+                    <li></li>
+                  </ul>
+                </div>
+                <!-- End of col-6 -->
+              </div>
+              <!-- End of row 4 -->
+            </div>
+            <!-- End of col-12 -->
+          </div>
+          <!-- End of small-container -->
 
           <!-- Footer -->
           <?php

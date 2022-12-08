@@ -101,8 +101,8 @@
                   $rowcount1 = mysqli_num_rows($result);
 
                  ?>
-                <p><?php echo $rowcount1; ?> posts</p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. <br>
+                <p class="text-muted"><?php echo $rowcount1; ?> posts</p>
+                Do you have a surplus of unused electronic products? Then why not take a chance to swap it for another product that will be more useful for you. Get products you need without spending any money. Exchange your unused electronic products  and promote to reduce e-waste. Find you best trade through SWAP easily and quickly. Swap your electronics for equally worthy products by posting your product in our website and  your trade buddy will find you easily. <br>
                 <a href="electronics.php">View More  &rarr;</a>
               </div>
             </div>
@@ -124,8 +124,8 @@
                   $rowcount2 = mysqli_num_rows($result);
 
                  ?>
-                <p><?php echo $rowcount2; ?> Posts</p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. <br>
+                <p class="text-muted"><?php echo $rowcount2; ?> Posts</p>
+                 SWAP allows you to give away books you no longer need for books you want. Create an account and add the books you want to give away and find other traders who gives away books which might be of your interest. Exchange knowledge and entertainment by exchanging books through SWAP. You can find traders from around the country easily.<br>
                 <a href="books.php">View More  &rarr;</a>
               </div>
             </div>
@@ -147,8 +147,8 @@
                   $rowcount3 = mysqli_num_rows($result);
 
                  ?>
-                <p><?php echo $rowcount3; ?> posts</p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. <br>
+                <p class="text-muted"><?php echo $rowcount3; ?> posts</p>
+                Do you have a pair of kitchen stools that you no longer use? Exchange it via SWAP and find something more useful for you. Furnitures can be refurbished, therefore giving away few old chairs in exchange for a coffee table and refurbishing it is totally worth it. Why worrying about cost of paying for storage units when you can now give away things you no longer need. <br>
                 <a href="furnitures.php">View More  &rarr;</a>
               </div>
             </div>
@@ -163,7 +163,7 @@
       <div class="row">
         <div class="col-5 index">
           <h5>About Us</h5>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+          <p>SWAP is a gateway to get products you want for free of charge. You only need to give away products you no longer need and get products you really need. Post your unused products in our website and traders will find their way to you offering their products they might want to exchange with you. Find the product you want now!</p>
         </div>
         <div class="col-4 index">
           <img src="images/about_us.png" alt="">

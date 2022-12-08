@@ -213,7 +213,7 @@
        <div class="col-10 category">
          <nav aria-label="Page navigation example">
            <ul class="pagination justify-content-end">
-             <li class="page-item">
+             <li class="page-item disabled">
                <a class="page-link" aria-label="Previous" href="electronics.php?page=<?= $Previous; ?>">&larr; Previous</a>
              </li>
              <?php for($i = 1; $i <= $pages; $i++) : ?>
