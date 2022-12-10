@@ -1395,6 +1395,145 @@ margin-right:10px;
   font-size:13px;
 }
 
+/* Help & support */
+.col-12.hp img{
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+  filter: blur(2px);
+  -webkit-filter: blur(2px);
+}
+
+.col-12.hp h1{
+  color:#fff;
+  font-weight: bold;
+  position: absolute;
+  top:28%;
+  margin-left: 10%;
+}
+
+.col-12.hp .banner{
+  color:#fff;
+  font-weight: 600;
+  position: absolute;
+  top:38%;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+.col-12.hp .col-4 .d-flex a{
+  text-align:left;
+  display:inline-block;
+}
+
+.col-12.hp .col-8 .accordion{
+  margin-top:5%;
+}
+
+.col-12.hp .col-8 .accordion button{
+  color:#02444b;
+}
+
+.col-12.hp .col-8 .accordion p, ol{
+  color:#595959;
+  font-size: 13px;
+}
+
+.col-12.hp .col-8 .accordion ul li{
+  color:#595959;
+  font-size: 13px;
+}
+
+.col-12.hp h2{
+  color:#02444b;
+  text-align: center;
+  font-weight: bold;
+}
+
+/* Terms & conditions */
+.col-12.tc img{
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+  filter: blur(2px);
+  -webkit-filter: blur(2px);
+}
+
+.col-12.tc h1{
+  color:#fff;
+  font-weight: bold;
+  position: absolute;
+  top:28%;
+  margin-left: 10%;
+}
+
+.col-12.tc .banner{
+  color:#fff;
+  font-weight: 600;
+  position: absolute;
+  top:38%;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+.col-12.tc h2{
+  color:#02444b;
+  text-align: center;
+  font-weight: bold;
+}
+
+.col-12.tc h6{
+  color:#02444b;
+  font-weight: 600;
+}
+
+.col-12.tc p, ul{
+  color:#02444b;
+  font-size: 13px;
+}
+
+/* Privacy Policy */
+.col-12.policy img{
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+  filter: blur(2px);
+  -webkit-filter: blur(2px);
+}
+
+.col-12.policy h1{
+  color:#fff;
+  font-weight: bold;
+  position: absolute;
+  top:28%;
+  margin-left: 10%;
+}
+
+.col-12.policy .banner{
+  color:#fff;
+  font-weight: 600;
+  position: absolute;
+  top:38%;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+.col-12.policy h2{
+  color:#02444b;
+  text-align: center;
+  font-weight: bold;
+}
+
+.col-12.policy h6{
+  color:#02444b;
+  font-weight: 600;
+}
+
+.col-12.policy p, ul{
+  color:#02444b;
+  font-size: 13px;
+}
+
 /*Footer*/
 .footer{
   padding-top:50px;

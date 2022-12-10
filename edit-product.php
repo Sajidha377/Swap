@@ -10,18 +10,20 @@
   require("code_lib.inc.php");
 
   //copying the form field values into variables
-  $product_id      = $_REQUEST['product_id'];
+  $product_id         = $_REQUEST['product_id'];
   $product_name       = $_REQUEST['product_name'];
   $product_condition  = $_REQUEST['product_condition'];
   $description        = $_REQUEST['description'];
   $category           = $_REQUEST['category'];
+  $confirmation       = $_REQUEST['confirmation'];
 
   //lets build the dynamic sql commands
   $sql = "update product set ";
   $sql .= "product_name='$product_name',";
   $sql .= "product_condition='$product_condition',";
   $sql .= "description='$description',";
-  $sql .= "category='$category' where product_id='$product_id'";
+  $sql .= "category='$category',";
+  $sql .= "confirmation='$confirmation' where product_id='$product_id'";
 
   echo $sql;
 
@@ -63,7 +65,7 @@
 
     }
 
-    $_SESSION['status'] = "Updated post successfully!!";
+    $_SESSION['status'] = "Update successful!! Product will be posted after verification!!";
     header("location:user-account.php?status=pass");
 
   }

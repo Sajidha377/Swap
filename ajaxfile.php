@@ -21,27 +21,29 @@ require("db_connection.php");
 
    <div class="mb-1">
      <label for="productName" class="form-label">Product Name</label>
-     <input type="text" class="form-control" id="product_name" name="product_name" value="<?php echo $row['product_name']; ?>" style="font-size:14px;">
+     <input type="text" class="form-control" id="product_name" name="product_name" value="<?php echo $row['product_name']; ?>" style="font-size:14px;" required>
    </div>
 
    <div class="mb-1">
      <label for="productCondition" class="form-label">Condition</label>
      <select class="form-select" name="product_condition" style="font-size:14px;">
-       <option disabled value=""><?php echo $row['product_condition']; ?></option>
+       <option selected value="<?php echo $row['product_condition']; ?>"><?php echo $row['product_condition']; ?></option>
        <option value="New">New</option>
-       <option value="Used">Used</option>
+       <option value="Very Good">Very Good</option>
+       <option value="Good">Good</option>
+       <option value="Satisfactory">Satisfactory</option>
      </select>
    </div>
 
    <div class="mb-1">
      <label for="description" class="form-label">Description</label>
-     <textarea class="form-control" name="description" id="description" rows="4" cols="80" style="font-size:14px;"><?php echo $row['description']; ?></textarea>
+     <textarea class="form-control" name="description" id="description" rows="4" cols="80" style="font-size:14px;" required><?php echo $row['description']; ?></textarea>
    </div>
 
    <div class="mb-1">
      <label for="category" class="form-label">Category</label>
      <select class="form-select" name="category" style="font-size:14px;">
-       <option disabled selected value=""><?php echo $row['category']; ?></option>
+       <option selected value="<?php echo $row['category']; ?>"><?php echo $row['category']; ?></option>
        <option value="Electronics">Electronics</option>
        <option value="Books">Books</option>
        <option value="Furnitures">Furnitures</option>
@@ -53,6 +55,14 @@ require("db_connection.php");
      <input type="file" class="form-control" name="picture" id="picture" value="" style="font-size:14px;">
      <img src="images/large/<?php echo $row['picture'];?>" alt="">
    </div>
+
+   <div class="col-md-6">
+     <select class="form-select" name="confirmation" style="visibility:hidden;">
+       <option selected value="No">No</option>
+       <option value="Yes">Yes</option>
+     </select>
+   </div>
+   <!-- End of col-md-6 -->
 
    <button type="submit" class="btn btn-success" name="button">Save Changes</button>
  </form>

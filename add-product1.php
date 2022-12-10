@@ -75,7 +75,9 @@
                     <label for="productCondition" class="form-label">Condition</label>
                     <select class="form-select" name="product_condition" required>
                       <option selected value="New">New</option>
-                      <option value="Used">Used</option>
+                      <option value="Very Good">Very Good</option>
+                      <option value="Good">Good</option>
+                      <option value="Satisfactory">Satisfactory</option>
                     </select>
                   </div>
                   <!-- End of col-md-6 -->
