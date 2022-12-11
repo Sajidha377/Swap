@@ -413,17 +413,17 @@
   line-height:15px;
 }
 
-.col-5.category .btn{
+.col-5.category button{
   background-color:#02444b;
   color:#ffffff;
   border-radius:30px;
   font-size:13px;
   display:inline-block;
   font-weight:bold;
-  padding:8px 30px;
-  margin:30px 0;
   line-height:15px;
   margin-right:10px;
+  border:none;
+  padding: 8px 10px;
 }
 
 .col-10.category nav ul li a{
@@ -448,6 +448,19 @@
 
 .carousel-inner{
   width:100%;
+}
+
+.alert .details th{
+  font-size:13px;
+}
+
+.alert .details td{
+  font-size: 12px;
+}
+
+.alert .details p{
+  font-size:13px;
+  font-weight: 600;
 }
 
 /*signup*/
@@ -870,12 +883,11 @@
   font-weight:bold;
 }
 
-.col-10.account .modal .mb-1 .eye{
+.container.md .modal .mb-1 .eye{
   position:relative;
   float:right;
-  margin-left: -25px;
-  margin-top: -27px;
-  margin-right:10px;
+  margin-top:-25px;
+  margin-right: 10px;
 }
 
 #hide1{
@@ -899,10 +911,6 @@
 
 .col-8.account .card table td{
   font-size:12px;
-}
-
-.col-8.account .card table tr, th, td {
-  /* border:1px solid; */
 }
 
 .col-8.account .card button{
@@ -1532,6 +1540,33 @@ margin-right:10px;
 .col-12.policy p, ul{
   color:#02444b;
   font-size: 13px;
+}
+
+/* Admin */
+.col-12.admin h2{
+  text-align: center;
+  color:#02444b;
+  font-weight: bold;
+  padding-top: 5%;
+}
+
+.col-11.admin .col-6.admin tr{
+  vertical-align:text-top;
+}
+
+.col-11.admin .col-6.admin th{
+  font-size:13px;
+}
+
+.col-11.admin .col-6.admin td{
+  font-size:12px;
+}
+
+.container.admin .eye{
+  position:relative;
+  float:right;
+  margin-top:-25px;
+  margin-right: 10px;
 }
 
 /*Footer*/

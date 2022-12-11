@@ -65,6 +65,7 @@ require("db_connection.php");
    <!-- End of col-md-6 -->
 
    <button type="submit" class="btn btn-success" name="button">Save Changes</button>
+   <a href="user-delete-post.php?b=<?php echo $row['product_id']; ?>"> <button type="button" class="btn btn-danger">Delete</button> </a>
  </form>
 
 <?php

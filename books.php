@@ -188,7 +188,8 @@
                   <td style="visibility:hidden;"><?php echo $row['user_id']; ?></td>
                 </tr>
                 <tr>
-                  <td> <a href="" class="btn">View</a> </td>
+                <td><button class="viewbtn" data-bs-toggle="modal" data-bs-target="#staticBackdrop" type="button" name="button"
+                  data-id="<?php echo $row['product_id']; ?>">View</button> </td>
                 </tr>
               </tbody>
             </table>
@@ -229,6 +230,21 @@
     </div>
     <!-- End of container md -->
 
+
+    <!-- View post details -->
+    <div class="modal fade post" id="proModal" role="dialog" >
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h4 class="modal-title">Product Details</h4>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body-post">
+            </div>
+          </div>
+        </div>
+      </div>
+
     <!-- Footer -->
     <?php
       if(isset($_SESSION['user_id'])){
@@ -241,6 +257,25 @@
 
     </div>
 <!-- End of Main Container -->
+
+<script type="text/javascript">
+  $(document).ready(function(){
+    $('.viewbtn').click(function(){
+
+      var errorList="";
+      var product_id = $(this).data('id');
+      $.ajax({
+        url: 'ajaxfile1.php',
+        type: 'post',
+        data: {product_id: product_id},
+        success: function(response){
+          $('.modal-body-post').html(response);
+          $('#proModal').modal('show');
+        }
+      });
+    });
+  });
+</script>
 
   </body>
 </html>

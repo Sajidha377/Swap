@@ -67,7 +67,7 @@ require("validate-admin.php");
                 <div class="card-body">
                   <h5 class="card-title"><?php echo $rowcount1; ?></h5>
                   <h6 class="card-subtitle mb-2 text-muted">Electronics</h6>
-                  <i class=" fas fa-solid fa-laptop"></i>
+                  <i class="fa fa-laptop fa-2x" aria-hidden="true"></i>
                 </div>
               </div>
               <!-- Electronics -->
@@ -88,7 +88,7 @@ require("validate-admin.php");
                 <div class="card-body">
                   <h5 class="card-title"><?php echo $rowcount2; ?></h5>
                   <h6 class="card-subtitle mb-2 text-muted">Books</h6>
-                  <i class="fas fa-solid fa-book"></i>
+                  <i class="fa fa-book fa-2x" aria-hidden="true"></i>
                 </div>
               </div>
               <!-- Books -->
@@ -109,7 +109,7 @@ require("validate-admin.php");
                 <div class="card-body">
                   <h5 class="card-title"><?php echo $rowcount3; ?></h5>
                   <h6 class="card-subtitle mb-2 text-muted">Furnitures</h6>
-                  <i class="fas fa-solid fa-couch"></i>
+                  <i class="fas fa-solid fa-couch fa-2x"></i>
                 </div>
               </div>
               <!-- Furnitures -->
@@ -132,7 +132,7 @@ require("validate-admin.php");
                 <div class="card-body">
                   <h5 class="card-title"><?php echo $rowcount4; ?></h5>
                   <h6 class="card-subtitle mb-2 text-muted">Registered Customers</h6>
-                  <i class="fas fa-solid fa-users"></i>
+                  <i class="fas fa-solid fa-users fa-2x"></i>
                 </div>
               </div>
               <!-- Registered customers -->
@@ -152,7 +152,7 @@ require("validate-admin.php");
                 <div class="card-body">
                   <h5 class="card-title"><?php echo $rowcount5; ?></h5>
                   <h6 class="card-subtitle mb-2 text-muted">Confirmed No. of Posts</h6>
-                  <i class="fas fa-solid fa-list"></i>
+                  <i class="fa fa-th-large fa-2x" aria-hidden="true"></i>
                 </div>
               </div>
               <!-- Total confirmed posts -->
@@ -171,7 +171,7 @@ require("validate-admin.php");
                 <div class="card-body">
                   <h5 class="card-title"><?php echo $rowcount6; ?></h5>
                   <h6 class="card-subtitle mb-2 text-muted">Unconfirmed Posts</h6>
-                  <i class="fas fa-solid fa-list"></i>
+                  <i class="fas fa-solid fa-list fa-2x"></i>
                 </div>
               </div>
               <!-- Total unconfirmed posts -->

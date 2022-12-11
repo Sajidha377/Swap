@@ -35,7 +35,7 @@
   if($x>0){
     //echo "record successfully added";
     $_SESSION['status'] = "Sign Up Successfull!!";
-    header("location:dashboard.php?status=pass");
+    header("location:admin.php?status=pass");
   }
   else{
     //echo "adding record failed";

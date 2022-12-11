@@ -19,6 +19,12 @@ require("code_lib.inc.php");
 
   if($x > 0){
 
+    if($old_picture_name != "default.jpg"){
+      unlink("images/large/$old_picture_name");
+      unlink("images/thumb/$old_picture_name");
+    }
+  
+
     // echo "Deleted Successfully!!";
     $_SESSION['status'] = "Product deleted successfully!!";
     header("location:confirm-post.php?status=pass");

@@ -32,7 +32,7 @@
             include("header2.php");
            ?>
 
-           <div class="container md">
+          <div class="container md">
 
              <div class="row 1">
                <div class="col-10 account">
@@ -124,7 +124,9 @@
                                  <table style="width:100%;">
                                    <tbody>
                                      <tr style="float:right;">
-                                       <th><button class="editbtn" type="button" name="button" data-id="<?php echo $row['product_id']; ?>" style="cursor:pointer;">Edit</button></th>
+                                       <th><button class="editbtn" type="button" name="button" 
+                                       data-id="<?php echo $row['product_id']; ?>" style="cursor:pointer;">
+                                       Edit</button></th>
                                      </tr>
                                    </tbody>
                                  </table>
@@ -295,6 +297,10 @@
                       <div class="mb-1">
                         <label for="exampleAccessCode" class="form-label">New Password</label> <span style="color:#ff0000">*</span>
                         <input type="password" value="" class="form-control" id="new_access_code" name="new_access_code" aria-describedby="emailHelp" placeholder="New Password" style="font-size:13px;">
+                        <span class="eye" onclick="myFunction()">
+                          <i id="hide1" class="fas fa-solid fa-eye"></i>
+                          <i id="hide2" class="fas fa-solid fa-eye-slash"></i>
+                        </span>
                       </div>
 
                       <button type="submit" class="btn btn-success" name="button" data-bs-toggle="modal" data-bs-target="#staticBackdrop3">Change Password</button>
@@ -309,8 +315,8 @@
             </div>
 
 
-           </div>
-           <!-- End of container md -->
+          </div>
+          <!-- End of container md -->
 
 
 
@@ -324,7 +330,7 @@
 
     <script>
       function myFunction(){
-        var x = document.getElementById("access_code");
+        var x = document.getElementById("new_access_code");
         var y = document.getElementById("hide1");
         var z = document.getElementById("hide2");
 
