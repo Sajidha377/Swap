@@ -87,7 +87,7 @@
                   <div class="card-body">
                     <h5 class="card-title"></h5>
                     <h6 class="card-subtitle mb-2 text-muted">Change Passowrd</h6>
-                    <i class="fas fa-edit fa-2x"></i> <br>
+                    <i class="fas fa-lock fa-2x"></i> <br>
                     <button type="button" class="btn btn-success" data-bs-toggle="modal" 
                     data-bs-target="#staticBackdrop2" style="margin-top:5px;">Change</button>
                   </div>
