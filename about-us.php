@@ -38,7 +38,7 @@
           <div class="small-container">
             <div class="row 1">
               <div class="col-12 about">
-                <h1>We're on a mission to <br> promote eco-friendly future.</h1>
+                <h1>We're on a mission to <br> promote Eco-friendly future</h1>
                 <p>Be a part of making a greener future with us. SWAP website intends <br> to promote upcycling of unused products. Swap products you no longer <br> need for ones you need.</p>
               </div>
               <!-- End of col-12 -->
