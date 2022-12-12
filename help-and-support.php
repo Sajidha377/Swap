@@ -241,7 +241,7 @@
                     <div class="accordion-item">
                       <h2 class="accordion-header" id="flush-headingSeven">
                         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseSeven" aria-expanded="false" aria-controls="flush-collapseSeven">
-                          How edit post details?
+                          How to edit post details?
                         </button>
                       </h2>
                       <div id="flush-collapseSeven" class="accordion-collapse collapse" aria-labelledby="flush-headingSeven" data-bs-parent="#accordionFlushExample3">

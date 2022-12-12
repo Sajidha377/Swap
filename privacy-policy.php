@@ -45,7 +45,7 @@
             <div class="small-container">
               <div class="col-12 policy">
 
-                <h2>Terms & Conditions</h2>
+                <h2>Privacy Policy</h2>
 
               </div>
               <!-- End of col-12 -->
