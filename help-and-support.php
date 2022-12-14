@@ -305,7 +305,8 @@
                       <div id="flush-collapseNine" class="accordion-collapse collapse" aria-labelledby="flush-headingNine" data-bs-parent="#accordionFlushExample5">
                         <div class="accordion-body">
                           <p>Once you post a product or update the details of an already posted product, it will be sent for 
-                            verification. Once the verification is done it will be posted in SWAP and available in your profile.</p>
+                            verification. Once the verification is done it will be posted in SWAP and available in your profile.</p> <br>
+                          <p>Any products with wrong or misleading information will be rejected and your post will be rejected.</p>
                         </div>
                       </div>
                     </div>

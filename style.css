@@ -452,10 +452,12 @@
 
 .alert .details th{
   font-size:13px;
+  vertical-align: top;
 }
 
 .alert .details td{
   font-size: 12px;
+  vertical-align: top;
 }
 
 .alert .details p{

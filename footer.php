@@ -13,9 +13,8 @@
         <div class="col-3 footer1">
             <ul>
             <li><h6>Socials</h6></li>
-            <li> <a href="#">Whatsapp</a> </li>
-            <li> <a href="#">Instagram</a> </li>
-            <li> <a href="#">Facebook</a> </li>
+            <li> <a href="https://www.instagram.com/" target="_blank">Instagram</a> </li>
+            <li> <a href="https://www.facebook.com/login/" target="_blank">Facebook</a> </li>
           </ul>
         </div>
         <div class="col-3 footer1">
