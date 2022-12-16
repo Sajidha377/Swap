@@ -9,13 +9,14 @@ require("db_connection.php");
 // connecting the code library
 require("code_lib.inc.php");
 
-  $id = $_GET['b'];
+  $id1 = $_GET['b'];
 
   //building a dynamic SQL command
-  $sql = "delete from product where product_id='$id'";
+  $sql = "DELETE FROM product_admin WHERE product_id='$id1';" and $sql .= "DELETE FROM product WHERE product_id='$id1'";
+  
 
   //execute the sql command
-  $x = $mysqli->query($sql);
+  $x = $mysqli->multi_query($sql);
 
   if($x > 0){
 
