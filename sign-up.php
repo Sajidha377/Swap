@@ -44,7 +44,7 @@
                 <h5>Sign Up</h5>
                 <p>Already have an account? <a href="login.php">Login</a>  </p>
                 <!-- Form -->
-                <form id="SignupForm" action="sign-up2.php" method="post" enctype="multipart/form-data">
+                <form name="userSignup" onsubmit="return validateForm()" id="SignupForm" action="sign-up2.php" method="post" enctype="multipart/form-data">
                   <div class="mb-1">
                     <label for="exampleInputFirstName" class="form-label">First Name</label> <span style="color:#ff0000">*</span>
                     <input type="text" class="form-control" id="user_first_name" name="user_first_name" aria-describedby="emailHelp" required>
@@ -98,6 +98,48 @@
           x.type = "password";
           y.style.display = "none";
           z.style.display = "block";
+        }
+      }
+    </script>
+    
+
+    <script>
+      function validateForm(){
+        let fname = document.forms["userSignup"]["user_first_name"].value;
+        let lname = document.forms["userSignup"]["user_last_name"].value;
+        let userPass = document.forms["userSignup"]["access_code"].value;
+        let userMobile = document.forms["userSignup"]["mobile_number"].value;
+        if (fname.length > 20){
+          swal({
+            title: "Exceeding word limit",
+            text: "First Name must be within 20 characters",
+            button: "Ok",
+          });
+          return false;
+        }
+        else if (lname.length > 20){
+          swal({
+            title: "Exceeding word limit",
+            text: "Last Name must be within 20 characters",
+            button: "Ok",
+          });
+          return false;
+        }
+        else if (userPass.length < 8){
+          swal({
+            title: "Weak Password",
+            text: "Use a strong password with minimum of 8 characters",
+            button: "Ok",
+          });
+          return false;
+        }
+        else if (userMobile.length < 10 || userMobile.length > 10){
+          swal({
+            title: "Invalid Mobile number",
+            text: "Enter a valid Mobile Number",
+            button: "Ok",
+          });
+          return false;
         }
       }
     </script>

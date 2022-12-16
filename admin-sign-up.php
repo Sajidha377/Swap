@@ -122,19 +122,35 @@
         let adminPass = document.forms["adminSignup"]["admin_access_code"].value;
         let adminMobile = document.forms["adminSignup"]["admin_mobile_number"].value;
         if (fname.length > 20){
-          window.alert("Use only 20 characters for First Name");
+          swal({
+            title: "Exceeding word limit",
+            text: "First Name must be within 20 characters",
+            button: "Ok",
+          });
           return false;
         }
         if (lname.length > 20){
-          window.alert("Use only 20 characters for Last Name");
+          swal({
+            title: "Exceeding word limit",
+            text: "Last Name must be within 20 characters",
+            button: "Ok",
+          });
           return false;
         }
         if (adminPass.length < 8){
-          window.alert("Password should atleast have minimum of 8 characters");
+          swal({
+            title: "Weak Password",
+            text: "Use a strong password with minimum of 8 characters",
+            button: "Ok",
+          });
           return false;
         }
         if (adminMobile.length < 10 || adminMobile.length > 10){
-          window.alert("Enter a valid Mobile number");
+          swal({
+            title: "Invalid Mobile number",
+            text: "Enter a valid Mobile Number",
+            button: "Ok",
+          });
           return false;
         }
       }
