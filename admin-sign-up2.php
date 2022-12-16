@@ -39,7 +39,7 @@
   }
   else{
     //echo "adding record failed";
-    $_SESSION['status'] = "Sign Up Failed!!";
+    $_SESSION['status'] = "Sign Up Failed!! Email already taken, use another email.";
     header("location:admin-sign-up.php?status=fail");
   }
 

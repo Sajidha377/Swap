@@ -204,7 +204,7 @@
             </div>
             <div class="modal-body 2">
               <!-- Form -->
-              <form name="editAdmin" onsubmit="return validateForm()" id="editUser" action="edit-admin-account.php" method="post" enctype="multipart/form-data" style="color:#02444b; font-size:14px; font-weight:600;">
+              <form name="editAdmin" onsubmit="return validateForm1()" id="editUser" action="edit-admin-account.php" method="post" enctype="multipart/form-data" style="color:#02444b; font-size:14px; font-weight:600;">
                 <div class="mb-1">
                   <label for="exampleInputFirstName" class="form-label">First Name</label> <span style="color:#ff0000">*</span>
                   <input type="text" value="<?php echo $row['admin_first_name']; ?>" class="form-control" id="admin_first_name" name="admin_first_name" aria-describedby="emailHelp" required style="font-size:14px;">
@@ -248,7 +248,7 @@
             </div>
             <div class="modal-body 2">
               <!-- Form -->
-              <form name="editAdminPass" onsubmit="return validateForm()" id="editUser" action="change-admin-password.php" method="post" enctype="multipart/form-data" style="color:#02444b; font-size:14px; font-weight:600;">
+              <form name="editAdminPass" onsubmit="return validateForm2()" id="editUser" action="change-admin-password.php" method="post" enctype="multipart/form-data" style="color:#02444b; font-size:14px; font-weight:600;">
                 
                 <div class="mb-1">
                   <label for="exampleAccessCode" class="form-label">Old Password</label> <span style="color:#ff0000">*</span>
@@ -299,7 +299,7 @@
     </script>
 
 <script>
-      function validateForm(){
+      function validateForm1(){
         let fname = document.forms["editAdmin"]["admin_first_name"].value;
         let lname = document.forms["editAdmin"]["admin_last_name"].value;
         let adminMobile = document.forms["editAdmin"]["admin_mobile_number"].value;
@@ -331,7 +331,7 @@
     </script>
 
     <script>
-      function validateForm(){
+      function validateForm2(){
         let userPass = document.forms["editAdminPass"]["admin_new_access_code"].value;
         if (userPass.length < 8){
           swal({

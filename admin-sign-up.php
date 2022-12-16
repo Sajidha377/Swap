@@ -78,7 +78,8 @@
                   </div>
                   <div class="mb-1">
                     <label for="exampleInputMobile" class="form-label">Mobile Number</label> <span style="color:#ff0000">*</span>
-                    <input type="text" class="form-control" id="admin_mobile_number" name="admin_mobile_number" aria-describedby="emailHelp" required>
+                    <input type="text" class="form-control" id="admin_mobile_number" name="admin_mobile_number" aria-describedby="emailHelp"
+                    oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" required>
                   </div>
                   <button type="submit" class="btn" name="button" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Sign Up</button>
                 </form>
@@ -121,6 +122,7 @@
         let lname = document.forms["adminSignup"]["admin_last_name"].value;
         let adminPass = document.forms["adminSignup"]["admin_access_code"].value;
         let adminMobile = document.forms["adminSignup"]["admin_mobile_number"].value;
+        var numbers = /^[0-9]+$/;
         if (fname.length > 20){
           swal({
             title: "Exceeding word limit",
@@ -155,6 +157,7 @@
         }
       }
     </script>
+
 
   </body>
 </html>

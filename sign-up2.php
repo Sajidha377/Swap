@@ -41,7 +41,7 @@ if($x>0){
   header("location:index.php?status=pass");
 }
 else{
-  $_SESSION['status'] = "Sign Up Failed!!";
+  $_SESSION['status'] = "Sign Up Failed!! Email already taken, use another email.";
   //echo "adding record failed";
   header("location:sign-up.php?status=fail");
 }

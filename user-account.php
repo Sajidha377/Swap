@@ -241,7 +241,7 @@
                    </div>
                    <div class="modal-body 2">
                      <!-- Form -->
-                     <form name="editAcc" onsubmit="return validateForm()" id="editUser" action="edit-user-account.php" method="post" enctype="multipart/form-data" style="color:#02444b; font-size:14px; font-weight:600;">
+                     <form name="editAcc" onsubmit="return validateForm1()" id="editUser" action="edit-user-account.php" method="post" enctype="multipart/form-data" style="color:#02444b; font-size:14px; font-weight:600;">
                        <div class="mb-1">
                          <label for="exampleInputFirstName" class="form-label">First Name</label> <span style="color:#ff0000">*</span>
                          <input type="text" value="<?php echo $row['user_first_name']; ?>" class="form-control" id="user_first_name" name="user_first_name" aria-describedby="emailHelp" required style="font-size:14px;">
@@ -285,7 +285,7 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                   </div>
                   <div class="modal-body 3">
-                    <form name="editPass" onsubmit="return validateForm()" id="changePassword" class="form" action="change-password.php" method="post" enctype="multipart/form-data" style="color:#02444b; font-size:14px; font-weight:600;">
+                    <form name="editPass" onsubmit="return validateForm2()" id="changePassword" class="form" action="change-password.php" method="post" enctype="multipart/form-data" style="color:#02444b; font-size:14px; font-weight:600;">
 
                       <div class="mb-1">
                         <label for="exampleAccessCode" class="form-label">Old Password</label> <span style="color:#ff0000">*</span>
@@ -368,7 +368,7 @@
     </script>
 
     <script>
-      function validateForm(){
+      function validateForm1(){
         let fname = document.forms["editAcc"]["user_first_name"].value;
         let lname = document.forms["editAcc"]["user_last_name"].value;
         let userMobile = document.forms["editAcc"]["mobile_number"].value;
@@ -400,7 +400,7 @@
     </script>
 
     <script>
-      function validateForm(){
+      function validateForm2(){
         let userPass = document.forms["editPass"]["new_access_code"].value;
         if (userPass.length < 8){
           swal({
