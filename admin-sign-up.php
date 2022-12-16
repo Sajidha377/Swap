@@ -55,7 +55,7 @@
                 <h5>Sign Up</h5>
 
                 <!-- Form -->
-                <form id="" action="admin-sign-up2.php" method="post" enctype="multipart/form-data">
+                <form id="" name="adminSignup" onsubmit="return validateForm()" action="admin-sign-up2.php" method="post" enctype="multipart/form-data">
                   <div class="mb-1">
                     <label for="exampleInputFirstName" class="form-label">First Name</label> <span style="color:#ff0000">*</span>
                     <input type="text" class="form-control" id="admin_first_name" name="admin_first_name" aria-describedby="emailHelp" required>
@@ -111,6 +111,31 @@
           x.type = "password";
           y.style.display = "none";
           z.style.display = "block";
+        }
+      }
+    </script>
+
+    <script>
+      function validateForm(){
+        let fname = document.forms["adminSignup"]["admin_first_name"].value;
+        let lname = document.forms["adminSignup"]["admin_last_name"].value;
+        let adminPass = document.forms["adminSignup"]["admin_access_code"].value;
+        let adminMobile = document.forms["adminSignup"]["admin_mobile_number"].value;
+        if (fname.length > 20){
+          window.alert("Use only 20 characters for First Name");
+          return false;
+        }
+        if (lname.length > 20){
+          window.alert("Use only 20 characters for Last Name");
+          return false;
+        }
+        if (adminPass.length < 8){
+          window.alert("Password should atleast have minimum of 8 characters");
+          return false;
+        }
+        if (adminMobile.length < 10 || adminMobile.length > 10){
+          window.alert("Enter a valid Mobile number");
+          return false;
         }
       }
     </script>
