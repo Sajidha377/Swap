@@ -93,6 +93,17 @@
                   </div>
                 </div>
                 <!-- Change Password -->
+                
+                <div class="card" style="width: 18rem; margin-top:2%;">
+                  <div class="card-body">
+                    <h5 class="card-title"></h5>
+                    <h6 class="card-subtitle mb-2 text-muted">Delete Account</h6>
+                    <i class="fas fa-user-slash fa-2x"></i> <br>
+                    <button type="button" class="btn btn-danger" data-bs-toggle="modal" 
+                    data-bs-target="#staticBackdrop3" style="margin-top:5px;">Delete</button>
+                  </div>
+                </div>
+                <!-- Delete Account -->
 
 
                 <?php
@@ -275,6 +286,27 @@
         </div>
       </div>
       <!-- End of Edit Admin Password modal -->
+      
+      <!-- Delete account Modal -->
+      <div class="modal fade 3" id="staticBackdrop3" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel3" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="staticBackdropLabel" style="color:red; font-weight:bold;">Warning!!</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body 2">
+               <p style="font-size:13px;">You are attempting to delete your account!!</p>
+               <h6 style="font-weight:600;">Are you sure you want to delete your account?</h6>
+            </div>
+            <div class="modal-footer">
+                <a href="admin-delete-account.php?d=<?php echo $row['admin_id']; ?>"><button type="submit" class="btn btn-danger" name="button" data-bs-toggle="modal" data-bs-target="#staticBackdrop3">Yes</button></a>
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">No</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Delete account modal -->
 
     </div>
     <!-- End of main container -->
