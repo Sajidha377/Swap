@@ -51,6 +51,7 @@
                    unset($_SESSION['status']);
                  }
                ?>
+               
                </div>
                <!-- End of col-10 -->
              </div>
@@ -65,6 +66,7 @@
                        <li> <a href="#" data-bs-toggle="modal" data-bs-target="#staticBackdrop2">Edit Account</a> </li>
                        <li> <a href="#" data-bs-toggle="modal" data-bs-target="#staticBackdrop3">Change Password</a> </li>
                        <li> <a href="add-product1.php">Post a Product</a> </li>
+                       <li> <a href="#" data-bs-toggle="modal" data-bs-target="#staticBackdrop4">Delete Account</a> </li>
                        <li> <a href="logout.php">  <i class="fas fa-sign-out-alt"></i> Log Out</a> </li>
                      </ul>
                      <!-- End of UL -->
@@ -85,6 +87,8 @@
 
                          //executing the SQL command
                          $rs = $mysqli->query($sql);
+                         
+                         if(mysqli_num_rows($rs)>0){
 
                          while($row = mysqli_fetch_assoc($rs)){
 
@@ -139,8 +143,22 @@
                         <!-- End of card mb-3 -->
 
                         <?php
+                            }
                           }
-                         ?>
+                          else{
+                        ?>
+                        
+                        <div class="alert alert-secondary" role="alert" style="text-align:center; font-weight:600;">
+                          OOPs!! You have not posted any products yet! <br>
+                          <i class="fas fa-search fa-5x"></i>
+                        </div>
+                        <div class="alert alert-secondary" role="alert" style="visibility:hidden;">
+                            OOPs!! You have not posted any products yet!
+                        </div>
+                        
+                        <?php
+                          }
+                        ?>
 
                      </div>
                      <!-- End of row 5 -->
@@ -309,6 +327,29 @@
                   </div>
                   <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+             <!-- Delete account Modal -->
+            <div class="modal fade 4" id="staticBackdrop4" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel4" aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="staticBackdropLabel" style="color:red; font-weight:600;">Warning!!</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body 4">
+                      
+                      <p style="font-size:13px;">You are attempting to delete your account! All you posts will be deleted and you cannot retrieve your account.</p>
+                      
+                      <h6 style="font-weight:600;">Are you sure you want to delete your account?</h6>
+                    
+                  </div>
+                  <div class="modal-footer">
+                    <a href="delete-account.php?c=<?php echo $row['user_id']; ?>"><button type="submit" class="btn btn-danger" name="button" data-bs-toggle="modal" data-bs-target="#staticBackdrop4">Yes</button></a>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">No</button>
                   </div>
                 </div>
               </div>

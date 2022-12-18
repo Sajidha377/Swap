@@ -4,8 +4,9 @@
   $username = "root";
   $password = "";
   $db_name  = "db_swap";
+  $port = "3310";
 
-  $mysqli = new mysqli($server,$username,$password,$db_name);
+  $mysqli = new mysqli($server,$username,$password,$db_name,$port);
 
   if($mysqli->connect_error){
     echo $mysqli->errorno . "<br />";
