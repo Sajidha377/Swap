@@ -49,6 +49,13 @@
                 unset($_SESSION['status']);
               }
             ?>
+            <?php
+              if(isset($_SESSION['status1'])){
+                echo '<div class="alert alert-warning alert-dismissible fade show" role="alert" style="margin-top:20px;">'
+                .$_SESSION['status1'].'<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button></div>';
+                unset($_SESSION['status1']);
+              }
+            ?>
           </div>
         </div>
 
@@ -63,7 +70,7 @@
               <!-- End of col-10 product1 -->
 
               <div class="col-10 product2">
-                <form class="form row g-3" action="add-product2.php" method="post" enctype="multipart/form-data" id="form1">
+                <form name="postPro" onsubmit="return validateForm()" class="form row g-3" action="add-product2.php" method="post" enctype="multipart/form-data" id="form1">
 
                   <div class="col-md-6">
                     <label for="productName" class="form-label">Product Name</label>
@@ -223,6 +230,39 @@
           if(this.readyState == 2){
             document.querySelector(".image-placeholder img").src = event.target.result;
           }
+        }
+      }
+    </script>
+
+    <script>
+      function validateForm(){
+        let p_name = document.forms["postPro"]["product_name"].value;
+        let p_image = document.forms["postPro"]["picture"].value;
+        let p_description = document.forms["postPro"]["description"].value;
+        
+        if (p_name.length > 50){
+          swal({
+            title: "Exceeding word limit",
+            text: "Product Name must be within 20 characters",
+            button: "Ok",
+          });
+          return false;
+        }
+        else if (p_description.length > 500){
+          swal({
+            title: "Exceeding word limit",
+            text: "Description must be within 500 characters",
+            button: "Ok",
+          });
+          return false;
+        }
+        else if (p_image.type !== jpeg){
+          swal({
+            title: "",
+            text: "",
+            button: "Ok",
+          });
+          return false;
         }
       }
     </script>

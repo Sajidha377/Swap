@@ -71,6 +71,8 @@
                 //executing the SQL command
                 $rs = $mysqli->query($sql);
 
+                if(mysqli_num_rows($rs)>0){
+
                 while($row = mysqli_fetch_assoc($rs)){
 
               ?>
@@ -137,10 +139,20 @@
               <!-- End of col-12 -->
 
               <?php
-
-               }
-
+                  }
+                }
+                else{
               ?>
+              
+              <div class="alert alert-secondary" role="alert" style="text-align:center; font-weight:600;">
+                No new posts yet! <br>
+                <i class="fas fa-search fa-5x"></i>
+              </div>
+              
+              <?php
+                }
+              ?>
+
 
               <?php
                 $admin_id = $_SESSION['admin_id'];

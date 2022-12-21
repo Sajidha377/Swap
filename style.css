@@ -1125,10 +1125,12 @@
 
 .col-8.confirm table th{
   font-size:13px;
+  vertical-align: top;
 }
 
 .col-8.confirm table td{
   font-size:12px;
+  vertical-align: top;
 }
 
 .col-8.confirm table th{
