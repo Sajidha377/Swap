@@ -104,7 +104,7 @@
                 please do not use our services. </p> <br>
 
 
-                <h6>Condtions</h6>
+                <h6>Conditions</h6>
                 <p>Our site acts as the venue for members to list and swap items. We are not involved in the actual 
                 transaction between swappers. As a result, we have no control over the quality, safety or legality of the 
                 items advertised, the truth or accuracy of the listings, the ability of swappers to complete swaps. In

@@ -27,7 +27,8 @@
         </div>
 
         <hr>
-        <p class="copyright" style="text-align:center; color:#02444b; font-size:13px;">Copyright &copy; <script>document.write(new Date().getFullYear())</script> | Geex Solutions</p>
+        <p class="copyright" style="text-align:center; color:#02444b; font-size:13px;">Copyright &copy; 
+        2022 - <script>document.write(new Date().getFullYear())</script> | Geex Solutions</p>
       </div>
   </div>
 <!-- End of Footer -->

@@ -304,9 +304,15 @@
                       </h2>
                       <div id="flush-collapseNine" class="accordion-collapse collapse" aria-labelledby="flush-headingNine" data-bs-parent="#accordionFlushExample5">
                         <div class="accordion-body">
-                          <p>Once you post a product or update the details of an already posted product, it will be sent for 
-                            verification. Once the verification is done it will be posted in SWAP and available in your profile.</p> <br>
-                          <p>Any products with wrong or misleading information will be rejected and your post will be rejected.</p>
+                          <ul>
+                            <li>Once you post a product or update the details of an already posted product, it will be sent for 
+                            verification. Once the verification is done it will be posted in SWAP and available in your profile.</li>
+                            <li>Any products with wrong or misleading information on your post will be rejected.</li>
+                            <li>Also if any information related to the product is wrong, post will be rejected. For example: A 
+                            product that belongs to Books category will rejected, if the wrong category has been selected.</li>
+                            <li>If the product image you uploaded is not visible due to extension error or size error, it will
+                            also be reject.</li>
+                          </ul>
                         </div>
                       </div>
                     </div>

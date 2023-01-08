@@ -65,6 +65,8 @@
 
                 <ul>
                   <li>Email address and contact information</li>
+                  <li>First and Last Name</li>
+                  <li>Encrypted Password</li>
                   <li>Computer sign-on data</li>
                 </ul>
 
